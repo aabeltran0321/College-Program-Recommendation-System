@@ -1,0 +1,49 @@
+<html>
+    <title>Intro | Taguig City University</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="app-name" content="website_viewer">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="/static/media/logo.png">
+    </head>
+    <style>
+        html{
+          height: 100%;
+          margin: auto;
+          width: 100%;
+          overflow-y: hidden;
+          overflow-x: hidden;
+        }
+        
+    </style>
+    <body>
+        <img src="/static/media/26.png" alt="home" width="100%" height="100%" style="position: fixed; left: 0px; top:0px">
+        <img src="/static/media/Departmentpagebackground.png" alt="home" width="70%" height="90%" style="position: fixed; left: 15%; top:5%; border-radius: 30px; "> -->
+        <div style="position: fixed; left: 15%; top:5%; width: 70%; height:90%; background: #115555; opacity: 0.7; border-radius: 30px;"></div>
+        <h1 style="font-family:'Segoe UI';  font-size: 30px; color: #FFFFFF; width: 35%; height: 100px; position: absolute; left: 18%; top: 7%; text-align: left; ">Welcome, {{ nickname }}!</h1>
+
+        <p style="font-family:'Segoe UI';  font-size: 25px; color: #FFFFFF; width: 65%; height: 100px; position: absolute; left: 18%; top: 15%; text-align: left;"> This <b> College Program Recommendation-based System</b> will assist you in determining which college programs best match your skills and abilities. You will take an aptitude test with these subject areas: </p>
+        
+        <ul style="font-family:'Segoe UI';  font-size: 25px; color: #FFFFFF; width: 65%; height: 100px; position: absolute; left: 18%; top: 30%; text-align: left;">
+            <li>General Information</li>
+            <li>Science</li>
+            <li>Numerical Reasoning</li>
+            <li>Verbal Reasoning</li>
+            <li>Abstract Reasoning</li>
+        </ul>
+
+        <p style="font-family:'Segoe UI';  font-size: 25px; color: #FFFFFF; width: 65%; height: 100px; position: absolute; left: 18%; top: 55%; text-align: left;">You must complete the test within <b>12 minutes</b>, allotted time for each subject area. All unfinished items will be considered wrong. Press the <b>Start Button</b> below to begin.<br><br>God bless with your exam.</p>
+
+        <!-- <a href = "/geninfo" style="font-family:'Segoe UI';  font-size: 30px; background: #FF0000 ;color: #FFFFFF; width: 10%; height: 7%; position: absolute; left: 45%; top: 75%; text-align: center; border-radius: 10px; " ><b>START</b></a> -->
+
+        <form action="/geninfo/" method="post">
+
+            {% csrf_token %}
+
+            <input type="submit" value="Start" style="font-family:'Segoe UI';  font-size: 30px; background: #FF0000 ;color: #FFFFFF; width: 10%; height: 7%; position: absolute; left: 45%; top: 75%; text-align: center; border-radius: 10px; font-weight: bold;">
+
+        </form>
+    
+    </body>
+
+</html>

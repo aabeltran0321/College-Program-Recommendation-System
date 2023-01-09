@@ -1,0 +1,678 @@
+<html>
+    <title>Verbal Reasoning | Taguig City University</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="app-name" content="website_viewer">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="/static/media/logo.png">
+    </head>
+    <style>
+        #html{
+          margin: auto;
+          width: 100%;
+          overflow-y: scroll;
+          overflow-x: hidden;
+        }
+    </style>
+    <body>
+        <img src="/static/media/26.png" alt="home" width="100%" height="100%" style="position: fixed; left: 0px; top:0px">
+        <img src="/static/media/adminheader.jpg" alt="home" width="80%" height="30%" style="position: absolute; left: 10%; top:5%; border-radius: 30px; ">
+
+        <div id="bkg_white" style="position: absolute; left: 10%; top:37%; width: 80%; height: auto; background: #FFFFFF; border-radius: 30px;"></div>
+
+        <h1 style="font-family:'Segoe UI';  font-size: 45px; color: #000000; width: 35%; height: 100px; position: absolute; left: 12%; top: 10%; text-align: left; ">Verbal Reasoning</h1>
+
+
+        <form action="/abstract_reasoning/" method="post" style="font-family:'Segoe UI';  font-size: 25px; color: #000000; width: 45%; height: 100px; position: absolute; left: 12%; top: 45%; text-align: left; ">
+            {% csrf_token %}
+            <img src="/static/media/{{verbal_reasoning_pic_1}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">1. {{ verbal_reasoning_question_1 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_1" name="verbal_reasoning_choices_1" value="{{ verbal_reasoning_choices_1a }}">
+            <label for="verbal_reasoning_choices_1">{{ verbal_reasoning_choices_1a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_1" name="verbal_reasoning_choices_1" value="{{ verbal_reasoning_choices_1b }}">
+            <label for="verbal_reasoning_choices_1">{{ verbal_reasoning_choices_1b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_1" name="verbal_reasoning_choices_1" value="{{ verbal_reasoning_choices_1c }}">
+            <label for="verbal_reasoning_choices_1">{{ verbal_reasoning_choices_1c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_1" name="verbal_reasoning_choices_1" value="{{ verbal_reasoning_choices_1d }}">
+            <label for="verbal_reasoning_choices_1">{{ verbal_reasoning_choices_1d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_2}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">2. {{ verbal_reasoning_question_2 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_2" name="verbal_reasoning_choices_2" value="{{ verbal_reasoning_choices_2a }}">
+            <label for="verbal_reasoning_choices_2">{{ verbal_reasoning_choices_2a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_2" name="verbal_reasoning_choices_2" value="{{ verbal_reasoning_choices_2b }}">
+            <label for="verbal_reasoning_choices_2">{{ verbal_reasoning_choices_2b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_2" name="verbal_reasoning_choices_2" value="{{ verbal_reasoning_choices_2c }}">
+            <label for="verbal_reasoning_choices_2">{{ verbal_reasoning_choices_2c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_2" name="verbal_reasoning_choices_2" value="{{ verbal_reasoning_choices_2d }}">
+            <label for="verbal_reasoning_choices_2">{{ verbal_reasoning_choices_2d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_3}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">3. {{ verbal_reasoning_question_3 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_3" name="verbal_reasoning_choices_3" value="{{ verbal_reasoning_choices_3a }}">
+            <label for="verbal_reasoning_choices_3">{{ verbal_reasoning_choices_3a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_3" name="verbal_reasoning_choices_3" value="{{ verbal_reasoning_choices_3b }}">
+            <label for="verbal_reasoning_choices_3">{{ verbal_reasoning_choices_3b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_3" name="verbal_reasoning_choices_3" value="{{ verbal_reasoning_choices_3c }}">
+            <label for="verbal_reasoning_choices_3">{{ verbal_reasoning_choices_3c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_3" name="verbal_reasoning_choices_3" value="{{ verbal_reasoning_choices_3d }}">
+            <label for="verbal_reasoning_choices_3">{{ verbal_reasoning_choices_3d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_4}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">4. {{ verbal_reasoning_question_4 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_4" name="verbal_reasoning_choices_4" value="{{ verbal_reasoning_choices_4a }}">
+            <label for="verbal_reasoning_choices_4">{{ verbal_reasoning_choices_4a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_4" name="verbal_reasoning_choices_4" value="{{ verbal_reasoning_choices_4b }}">
+            <label for="verbal_reasoning_choices_4">{{ verbal_reasoning_choices_4b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_4" name="verbal_reasoning_choices_4" value="{{ verbal_reasoning_choices_4c }}">
+            <label for="verbal_reasoning_choices_4">{{ verbal_reasoning_choices_4c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_4" name="verbal_reasoning_choices_4" value="{{ verbal_reasoning_choices_4d }}">
+            <label for="verbal_reasoning_choices_4">{{ verbal_reasoning_choices_4d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_5}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">5. {{ verbal_reasoning_question_5 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_5" name="verbal_reasoning_choices_5" value="{{ verbal_reasoning_choices_5a }}">
+            <label for="verbal_reasoning_choices_5">{{ verbal_reasoning_choices_5a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_5" name="verbal_reasoning_choices_5" value="{{ verbal_reasoning_choices_5b }}">
+            <label for="verbal_reasoning_choices_5">{{ verbal_reasoning_choices_5b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_5" name="verbal_reasoning_choices_5" value="{{ verbal_reasoning_choices_5c }}">
+            <label for="verbal_reasoning_choices_5">{{ verbal_reasoning_choices_5c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_5" name="verbal_reasoning_choices_5" value="{{ verbal_reasoning_choices_5d }}">
+            <label for="verbal_reasoning_choices_5">{{ verbal_reasoning_choices_5d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_6}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">6. {{ verbal_reasoning_question_6 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_6" name="verbal_reasoning_choices_6" value="{{ verbal_reasoning_choices_6a }}">
+            <label for="verbal_reasoning_choices_6">{{ verbal_reasoning_choices_6a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_6" name="verbal_reasoning_choices_6" value="{{ verbal_reasoning_choices_6b }}">
+            <label for="verbal_reasoning_choices_6">{{ verbal_reasoning_choices_6b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_6" name="verbal_reasoning_choices_6" value="{{ verbal_reasoning_choices_6c }}">
+            <label for="verbal_reasoning_choices_6">{{ verbal_reasoning_choices_6c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_6" name="verbal_reasoning_choices_6" value="{{ verbal_reasoning_choices_6d }}">
+            <label for="verbal_reasoning_choices_6">{{ verbal_reasoning_choices_6d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_7}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">7. {{ verbal_reasoning_question_7 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_7" name="verbal_reasoning_choices_7" value="{{ verbal_reasoning_choices_7a }}">
+            <label for="verbal_reasoning_choices_7">{{ verbal_reasoning_choices_7a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_7" name="verbal_reasoning_choices_7" value="{{ verbal_reasoning_choices_7b }}">
+            <label for="verbal_reasoning_choices_7">{{ verbal_reasoning_choices_7b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_7" name="verbal_reasoning_choices_7" value="{{ verbal_reasoning_choices_7c }}">
+            <label for="verbal_reasoning_choices_7">{{ verbal_reasoning_choices_7c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_7" name="verbal_reasoning_choices_7" value="{{ verbal_reasoning_choices_7d }}">
+            <label for="verbal_reasoning_choices_7">{{ verbal_reasoning_choices_7d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_8}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">8. {{ verbal_reasoning_question_8 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_8" name="verbal_reasoning_choices_8" value="{{ verbal_reasoning_choices_8a }}">
+            <label for="verbal_reasoning_choices_8">{{ verbal_reasoning_choices_8a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_8" name="verbal_reasoning_choices_8" value="{{ verbal_reasoning_choices_8b }}">
+            <label for="verbal_reasoning_choices_8">{{ verbal_reasoning_choices_8b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_8" name="verbal_reasoning_choices_8" value="{{ verbal_reasoning_choices_8c }}">
+            <label for="verbal_reasoning_choices_8">{{ verbal_reasoning_choices_8c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_8" name="verbal_reasoning_choices_8" value="{{ verbal_reasoning_choices_8d }}">
+            <label for="verbal_reasoning_choices_8">{{ verbal_reasoning_choices_8d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_9}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">9. {{ verbal_reasoning_question_9 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_9" name="verbal_reasoning_choices_9" value="{{ verbal_reasoning_choices_9a }}">
+            <label for="verbal_reasoning_choices_9">{{ verbal_reasoning_choices_9a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_9" name="verbal_reasoning_choices_9" value="{{ verbal_reasoning_choices_9b }}">
+            <label for="verbal_reasoning_choices_9">{{ verbal_reasoning_choices_9b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_9" name="verbal_reasoning_choices_9" value="{{ verbal_reasoning_choices_9c }}">
+            <label for="verbal_reasoning_choices_9">{{ verbal_reasoning_choices_9c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_9" name="verbal_reasoning_choices_9" value="{{ verbal_reasoning_choices_9d }}">
+            <label for="verbal_reasoning_choices_9">{{ verbal_reasoning_choices_9d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_10}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">10. {{ verbal_reasoning_question_10 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_10" name="verbal_reasoning_choices_10" value="{{ verbal_reasoning_choices_10a }}">
+            <label for="verbal_reasoning_choices_10">{{ verbal_reasoning_choices_10a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_10" name="verbal_reasoning_choices_10" value="{{ verbal_reasoning_choices_10b }}">
+            <label for="verbal_reasoning_choices_10">{{ verbal_reasoning_choices_10b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_10" name="verbal_reasoning_choices_10" value="{{ verbal_reasoning_choices_10c }}">
+            <label for="verbal_reasoning_choices_10">{{ verbal_reasoning_choices_10c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_10" name="verbal_reasoning_choices_10" value="{{ verbal_reasoning_choices_10d }}">
+            <label for="verbal_reasoning_choices_10">{{ verbal_reasoning_choices_10d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_11}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">11. {{ verbal_reasoning_question_11 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_11" name="verbal_reasoning_choices_11" value="{{ verbal_reasoning_choices_11a }}">
+            <label for="verbal_reasoning_choices_11">{{ verbal_reasoning_choices_11a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_11" name="verbal_reasoning_choices_11" value="{{ verbal_reasoning_choices_11b }}">
+            <label for="verbal_reasoning_choices_11">{{ verbal_reasoning_choices_11b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_11" name="verbal_reasoning_choices_11" value="{{ verbal_reasoning_choices_11c }}">
+            <label for="verbal_reasoning_choices_11">{{ verbal_reasoning_choices_11c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_11" name="verbal_reasoning_choices_11" value="{{ verbal_reasoning_choices_11d }}">
+            <label for="verbal_reasoning_choices_11">{{ verbal_reasoning_choices_11d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_12}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">12. {{ verbal_reasoning_question_12 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_12" name="verbal_reasoning_choices_12" value="{{ verbal_reasoning_choices_12a }}">
+            <label for="verbal_reasoning_choices_12">{{ verbal_reasoning_choices_12a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_12" name="verbal_reasoning_choices_12" value="{{ verbal_reasoning_choices_12b }}">
+            <label for="verbal_reasoning_choices_12">{{ verbal_reasoning_choices_12b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_12" name="verbal_reasoning_choices_12" value="{{ verbal_reasoning_choices_12c }}">
+            <label for="verbal_reasoning_choices_12">{{ verbal_reasoning_choices_12c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_12" name="verbal_reasoning_choices_12" value="{{ verbal_reasoning_choices_12d }}">
+            <label for="verbal_reasoning_choices_12">{{ verbal_reasoning_choices_12d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_13}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">13. {{ verbal_reasoning_question_13 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_13" name="verbal_reasoning_choices_13" value="{{ verbal_reasoning_choices_13a }}">
+            <label for="verbal_reasoning_choices_13">{{ verbal_reasoning_choices_13a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_13" name="verbal_reasoning_choices_13" value="{{ verbal_reasoning_choices_13b }}">
+            <label for="verbal_reasoning_choices_13">{{ verbal_reasoning_choices_13b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_13" name="verbal_reasoning_choices_13" value="{{ verbal_reasoning_choices_13c }}">
+            <label for="verbal_reasoning_choices_13">{{ verbal_reasoning_choices_13c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_13" name="verbal_reasoning_choices_13" value="{{ verbal_reasoning_choices_13d }}">
+            <label for="verbal_reasoning_choices_13">{{ verbal_reasoning_choices_13d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_14}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">14. {{ verbal_reasoning_question_14 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_14" name="verbal_reasoning_choices_14" value="{{ verbal_reasoning_choices_14a }}">
+            <label for="verbal_reasoning_choices_14">{{ verbal_reasoning_choices_14a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_14" name="verbal_reasoning_choices_14" value="{{ verbal_reasoning_choices_14b }}">
+            <label for="verbal_reasoning_choices_14">{{ verbal_reasoning_choices_14b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_14" name="verbal_reasoning_choices_14" value="{{ verbal_reasoning_choices_14c }}">
+            <label for="verbal_reasoning_choices_14">{{ verbal_reasoning_choices_14c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_14" name="verbal_reasoning_choices_14" value="{{ verbal_reasoning_choices_14d }}">
+            <label for="verbal_reasoning_choices_14">{{ verbal_reasoning_choices_14d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_15}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">15. {{ verbal_reasoning_question_15 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_15" name="verbal_reasoning_choices_15" value="{{ verbal_reasoning_choices_15a }}">
+            <label for="verbal_reasoning_choices_15">{{ verbal_reasoning_choices_15a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_15" name="verbal_reasoning_choices_15" value="{{ verbal_reasoning_choices_15b }}">
+            <label for="verbal_reasoning_choices_15">{{ verbal_reasoning_choices_15b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_15" name="verbal_reasoning_choices_15" value="{{ verbal_reasoning_choices_15c }}">
+            <label for="verbal_reasoning_choices_15">{{ verbal_reasoning_choices_15c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_15" name="verbal_reasoning_choices_15" value="{{ verbal_reasoning_choices_15d }}">
+            <label for="verbal_reasoning_choices_15">{{ verbal_reasoning_choices_15d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_16}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">16. {{ verbal_reasoning_question_16 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_16" name="verbal_reasoning_choices_16" value="{{ verbal_reasoning_choices_16a }}">
+            <label for="verbal_reasoning_choices_16">{{ verbal_reasoning_choices_16a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_16" name="verbal_reasoning_choices_16" value="{{ verbal_reasoning_choices_16b }}">
+            <label for="verbal_reasoning_choices_16">{{ verbal_reasoning_choices_16b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_16" name="verbal_reasoning_choices_16" value="{{ verbal_reasoning_choices_16c }}">
+            <label for="verbal_reasoning_choices_16">{{ verbal_reasoning_choices_16c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_16" name="verbal_reasoning_choices_16" value="{{ verbal_reasoning_choices_16d }}">
+            <label for="verbal_reasoning_choices_16">{{ verbal_reasoning_choices_16d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_17}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">17. {{ verbal_reasoning_question_17 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_17" name="verbal_reasoning_choices_17" value="{{ verbal_reasoning_choices_17a }}">
+            <label for="verbal_reasoning_choices_17">{{ verbal_reasoning_choices_17a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_17" name="verbal_reasoning_choices_17" value="{{ verbal_reasoning_choices_17b }}">
+            <label for="verbal_reasoning_choices_17">{{ verbal_reasoning_choices_17b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_17" name="verbal_reasoning_choices_17" value="{{ verbal_reasoning_choices_17c }}">
+            <label for="verbal_reasoning_choices_17">{{ verbal_reasoning_choices_17c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_17" name="verbal_reasoning_choices_17" value="{{ verbal_reasoning_choices_17d }}">
+            <label for="verbal_reasoning_choices_17">{{ verbal_reasoning_choices_17d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_18}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">18. {{ verbal_reasoning_question_18 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_18" name="verbal_reasoning_choices_18" value="{{ verbal_reasoning_choices_18a }}">
+            <label for="verbal_reasoning_choices_18">{{ verbal_reasoning_choices_18a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_18" name="verbal_reasoning_choices_18" value="{{ verbal_reasoning_choices_18b }}">
+            <label for="verbal_reasoning_choices_18">{{ verbal_reasoning_choices_18b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_18" name="verbal_reasoning_choices_18" value="{{ verbal_reasoning_choices_18c }}">
+            <label for="verbal_reasoning_choices_18">{{ verbal_reasoning_choices_18c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_18" name="verbal_reasoning_choices_18" value="{{ verbal_reasoning_choices_18d }}">
+            <label for="verbal_reasoning_choices_18">{{ verbal_reasoning_choices_18d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_19}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">19. {{ verbal_reasoning_question_19 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_19" name="verbal_reasoning_choices_19" value="{{ verbal_reasoning_choices_19a }}">
+            <label for="verbal_reasoning_choices_19">{{ verbal_reasoning_choices_19a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_19" name="verbal_reasoning_choices_19" value="{{ verbal_reasoning_choices_19b }}">
+            <label for="verbal_reasoning_choices_19">{{ verbal_reasoning_choices_19b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_19" name="verbal_reasoning_choices_19" value="{{ verbal_reasoning_choices_19c }}">
+            <label for="verbal_reasoning_choices_19">{{ verbal_reasoning_choices_19c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_19" name="verbal_reasoning_choices_19" value="{{ verbal_reasoning_choices_19d }}">
+            <label for="verbal_reasoning_choices_19">{{ verbal_reasoning_choices_19d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_20}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">20. {{ verbal_reasoning_question_20 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_20" name="verbal_reasoning_choices_20" value="{{ verbal_reasoning_choices_20a }}">
+            <label for="verbal_reasoning_choices_20">{{ verbal_reasoning_choices_20a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_20" name="verbal_reasoning_choices_20" value="{{ verbal_reasoning_choices_20b }}">
+            <label for="verbal_reasoning_choices_20">{{ verbal_reasoning_choices_20b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_20" name="verbal_reasoning_choices_20" value="{{ verbal_reasoning_choices_20c }}">
+            <label for="verbal_reasoning_choices_20">{{ verbal_reasoning_choices_20c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_20" name="verbal_reasoning_choices_20" value="{{ verbal_reasoning_choices_20d }}">
+            <label for="verbal_reasoning_choices_20">{{ verbal_reasoning_choices_20d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_21}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">21. {{ verbal_reasoning_question_21 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_21" name="verbal_reasoning_choices_21" value="{{ verbal_reasoning_choices_21a }}">
+            <label for="verbal_reasoning_choices_21">{{ verbal_reasoning_choices_21a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_21" name="verbal_reasoning_choices_21" value="{{ verbal_reasoning_choices_21b }}">
+            <label for="verbal_reasoning_choices_21">{{ verbal_reasoning_choices_21b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_21" name="verbal_reasoning_choices_21" value="{{ verbal_reasoning_choices_21c }}">
+            <label for="verbal_reasoning_choices_21">{{ verbal_reasoning_choices_21c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_21" name="verbal_reasoning_choices_21" value="{{ verbal_reasoning_choices_21d }}">
+            <label for="verbal_reasoning_choices_21">{{ verbal_reasoning_choices_21d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_22}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">22. {{ verbal_reasoning_question_22 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_22" name="verbal_reasoning_choices_22" value="{{ verbal_reasoning_choices_22a }}">
+            <label for="verbal_reasoning_choices_22">{{ verbal_reasoning_choices_22a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_22" name="verbal_reasoning_choices_22" value="{{ verbal_reasoning_choices_22b }}">
+            <label for="verbal_reasoning_choices_22">{{ verbal_reasoning_choices_22b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_22" name="verbal_reasoning_choices_22" value="{{ verbal_reasoning_choices_22c }}">
+            <label for="verbal_reasoning_choices_22">{{ verbal_reasoning_choices_22c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_22" name="verbal_reasoning_choices_22" value="{{ verbal_reasoning_choices_22d }}">
+            <label for="verbal_reasoning_choices_22">{{ verbal_reasoning_choices_22d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_23}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">23. {{ verbal_reasoning_question_23 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_23" name="verbal_reasoning_choices_23" value="{{ verbal_reasoning_choices_23a }}">
+            <label for="verbal_reasoning_choices_23">{{ verbal_reasoning_choices_23a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_23" name="verbal_reasoning_choices_23" value="{{ verbal_reasoning_choices_23b }}">
+            <label for="verbal_reasoning_choices_23">{{ verbal_reasoning_choices_23b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_23" name="verbal_reasoning_choices_23" value="{{ verbal_reasoning_choices_23c }}">
+            <label for="verbal_reasoning_choices_23">{{ verbal_reasoning_choices_23c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_23" name="verbal_reasoning_choices_23" value="{{ verbal_reasoning_choices_23d }}">
+            <label for="verbal_reasoning_choices_23">{{ verbal_reasoning_choices_23d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_24}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">24. {{ verbal_reasoning_question_24 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_24" name="verbal_reasoning_choices_24" value="{{ verbal_reasoning_choices_24a }}">
+            <label for="verbal_reasoning_choices_24">{{ verbal_reasoning_choices_24a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_24" name="verbal_reasoning_choices_24" value="{{ verbal_reasoning_choices_24b }}">
+            <label for="verbal_reasoning_choices_24">{{ verbal_reasoning_choices_24b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_24" name="verbal_reasoning_choices_24" value="{{ verbal_reasoning_choices_24c }}">
+            <label for="verbal_reasoning_choices_24">{{ verbal_reasoning_choices_24c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_24" name="verbal_reasoning_choices_24" value="{{ verbal_reasoning_choices_24d }}">
+            <label for="verbal_reasoning_choices_24">{{ verbal_reasoning_choices_24d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_25}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">25. {{ verbal_reasoning_question_25 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_25" name="verbal_reasoning_choices_25" value="{{ verbal_reasoning_choices_25a }}">
+            <label for="verbal_reasoning_choices_25">{{ verbal_reasoning_choices_25a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_25" name="verbal_reasoning_choices_25" value="{{ verbal_reasoning_choices_25b }}">
+            <label for="verbal_reasoning_choices_25">{{ verbal_reasoning_choices_25b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_25" name="verbal_reasoning_choices_25" value="{{ verbal_reasoning_choices_25c }}">
+            <label for="verbal_reasoning_choices_25">{{ verbal_reasoning_choices_25c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_25" name="verbal_reasoning_choices_25" value="{{ verbal_reasoning_choices_25d }}">
+            <label for="verbal_reasoning_choices_25">{{ verbal_reasoning_choices_25d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_26}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">26. {{ verbal_reasoning_question_26 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_26" name="verbal_reasoning_choices_26" value="{{ verbal_reasoning_choices_26a }}">
+            <label for="verbal_reasoning_choices_26">{{ verbal_reasoning_choices_26a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_26" name="verbal_reasoning_choices_26" value="{{ verbal_reasoning_choices_26b }}">
+            <label for="verbal_reasoning_choices_26">{{ verbal_reasoning_choices_26b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_26" name="verbal_reasoning_choices_26" value="{{ verbal_reasoning_choices_26c }}">
+            <label for="verbal_reasoning_choices_26">{{ verbal_reasoning_choices_26c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_26" name="verbal_reasoning_choices_26" value="{{ verbal_reasoning_choices_26d }}">
+            <label for="verbal_reasoning_choices_26">{{ verbal_reasoning_choices_26d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_27}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">27. {{ verbal_reasoning_question_27 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_27" name="verbal_reasoning_choices_27" value="{{ verbal_reasoning_choices_27a }}">
+            <label for="verbal_reasoning_choices_27">{{ verbal_reasoning_choices_27a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_27" name="verbal_reasoning_choices_27" value="{{ verbal_reasoning_choices_27b }}">
+            <label for="verbal_reasoning_choices_27">{{ verbal_reasoning_choices_27b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_27" name="verbal_reasoning_choices_27" value="{{ verbal_reasoning_choices_27c }}">
+            <label for="verbal_reasoning_choices_27">{{ verbal_reasoning_choices_27c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_27" name="verbal_reasoning_choices_27" value="{{ verbal_reasoning_choices_27d }}">
+            <label for="verbal_reasoning_choices_27">{{ verbal_reasoning_choices_27d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_28}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">28. {{ verbal_reasoning_question_28 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_28" name="verbal_reasoning_choices_28" value="{{ verbal_reasoning_choices_28a }}">
+            <label for="verbal_reasoning_choices_28">{{ verbal_reasoning_choices_28a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_28" name="verbal_reasoning_choices_28" value="{{ verbal_reasoning_choices_28b }}">
+            <label for="verbal_reasoning_choices_28">{{ verbal_reasoning_choices_28b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_28" name="verbal_reasoning_choices_28" value="{{ verbal_reasoning_choices_28c }}">
+            <label for="verbal_reasoning_choices_28">{{ verbal_reasoning_choices_28c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_28" name="verbal_reasoning_choices_28" value="{{ verbal_reasoning_choices_28d }}">
+            <label for="verbal_reasoning_choices_28">{{ verbal_reasoning_choices_28d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_29}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">29. {{ verbal_reasoning_question_29 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_29" name="verbal_reasoning_choices_29" value="{{ verbal_reasoning_choices_29a }}">
+            <label for="verbal_reasoning_choices_29">{{ verbal_reasoning_choices_29a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_29" name="verbal_reasoning_choices_29" value="{{ verbal_reasoning_choices_29b }}">
+            <label for="verbal_reasoning_choices_29">{{ verbal_reasoning_choices_29b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_29" name="verbal_reasoning_choices_29" value="{{ verbal_reasoning_choices_29c }}">
+            <label for="verbal_reasoning_choices_29">{{ verbal_reasoning_choices_29c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_29" name="verbal_reasoning_choices_29" value="{{ verbal_reasoning_choices_29d }}">
+            <label for="verbal_reasoning_choices_29">{{ verbal_reasoning_choices_29d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_30}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">30. {{ verbal_reasoning_question_30 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_30" name="verbal_reasoning_choices_30" value="{{ verbal_reasoning_choices_30a }}">
+            <label for="verbal_reasoning_choices_30">{{ verbal_reasoning_choices_30a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_30" name="verbal_reasoning_choices_30" value="{{ verbal_reasoning_choices_30b }}">
+            <label for="verbal_reasoning_choices_30">{{ verbal_reasoning_choices_30b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_30" name="verbal_reasoning_choices_30" value="{{ verbal_reasoning_choices_30c }}">
+            <label for="verbal_reasoning_choices_30">{{ verbal_reasoning_choices_30c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_30" name="verbal_reasoning_choices_30" value="{{ verbal_reasoning_choices_30d }}">
+            <label for="verbal_reasoning_choices_30">{{ verbal_reasoning_choices_30d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_31}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">31. {{ verbal_reasoning_question_31 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_31" name="verbal_reasoning_choices_31" value="{{ verbal_reasoning_choices_31a }}">
+            <label for="verbal_reasoning_choices_31">{{ verbal_reasoning_choices_31a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_31" name="verbal_reasoning_choices_31" value="{{ verbal_reasoning_choices_31b }}">
+            <label for="verbal_reasoning_choices_31">{{ verbal_reasoning_choices_31b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_31" name="verbal_reasoning_choices_31" value="{{ verbal_reasoning_choices_31c }}">
+            <label for="verbal_reasoning_choices_31">{{ verbal_reasoning_choices_31c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_31" name="verbal_reasoning_choices_31" value="{{ verbal_reasoning_choices_31d }}">
+            <label for="verbal_reasoning_choices_31">{{ verbal_reasoning_choices_31d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_32}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">32. {{ verbal_reasoning_question_32 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_32" name="verbal_reasoning_choices_32" value="{{ verbal_reasoning_choices_32a }}">
+            <label for="verbal_reasoning_choices_32">{{ verbal_reasoning_choices_32a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_32" name="verbal_reasoning_choices_32" value="{{ verbal_reasoning_choices_32b }}">
+            <label for="verbal_reasoning_choices_32">{{ verbal_reasoning_choices_32b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_32" name="verbal_reasoning_choices_32" value="{{ verbal_reasoning_choices_32c }}">
+            <label for="verbal_reasoning_choices_32">{{ verbal_reasoning_choices_32c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_32" name="verbal_reasoning_choices_32" value="{{ verbal_reasoning_choices_32d }}">
+            <label for="verbal_reasoning_choices_32">{{ verbal_reasoning_choices_32d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_33}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">33. {{ verbal_reasoning_question_33 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_33" name="verbal_reasoning_choices_33" value="{{ verbal_reasoning_choices_33a }}">
+            <label for="verbal_reasoning_choices_33">{{ verbal_reasoning_choices_33a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_33" name="verbal_reasoning_choices_33" value="{{ verbal_reasoning_choices_33b }}">
+            <label for="verbal_reasoning_choices_33">{{ verbal_reasoning_choices_33b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_33" name="verbal_reasoning_choices_33" value="{{ verbal_reasoning_choices_33c }}">
+            <label for="verbal_reasoning_choices_33">{{ verbal_reasoning_choices_33c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_33" name="verbal_reasoning_choices_33" value="{{ verbal_reasoning_choices_33d }}">
+            <label for="verbal_reasoning_choices_33">{{ verbal_reasoning_choices_33d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_34}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">34. {{ verbal_reasoning_question_34 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_34" name="verbal_reasoning_choices_34" value="{{ verbal_reasoning_choices_34a }}">
+            <label for="verbal_reasoning_choices_34">{{ verbal_reasoning_choices_34a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_34" name="verbal_reasoning_choices_34" value="{{ verbal_reasoning_choices_34b }}">
+            <label for="verbal_reasoning_choices_34">{{ verbal_reasoning_choices_34b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_34" name="verbal_reasoning_choices_34" value="{{ verbal_reasoning_choices_34c }}">
+            <label for="verbal_reasoning_choices_34">{{ verbal_reasoning_choices_34c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_34" name="verbal_reasoning_choices_34" value="{{ verbal_reasoning_choices_34d }}">
+            <label for="verbal_reasoning_choices_34">{{ verbal_reasoning_choices_34d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_35}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">35. {{ verbal_reasoning_question_35 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_35" name="verbal_reasoning_choices_35" value="{{ verbal_reasoning_choices_35a }}">
+            <label for="verbal_reasoning_choices_35">{{ verbal_reasoning_choices_35a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_35" name="verbal_reasoning_choices_35" value="{{ verbal_reasoning_choices_35b }}">
+            <label for="verbal_reasoning_choices_35">{{ verbal_reasoning_choices_35b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_35" name="verbal_reasoning_choices_35" value="{{ verbal_reasoning_choices_35c }}">
+            <label for="verbal_reasoning_choices_35">{{ verbal_reasoning_choices_35c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_35" name="verbal_reasoning_choices_35" value="{{ verbal_reasoning_choices_35d }}">
+            <label for="verbal_reasoning_choices_35">{{ verbal_reasoning_choices_35d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_36}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">36. {{ verbal_reasoning_question_36 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_36" name="verbal_reasoning_choices_36" value="{{ verbal_reasoning_choices_36a }}">
+            <label for="verbal_reasoning_choices_36">{{ verbal_reasoning_choices_36a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_36" name="verbal_reasoning_choices_36" value="{{ verbal_reasoning_choices_36b }}">
+            <label for="verbal_reasoning_choices_36">{{ verbal_reasoning_choices_36b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_36" name="verbal_reasoning_choices_36" value="{{ verbal_reasoning_choices_36c }}">
+            <label for="verbal_reasoning_choices_36">{{ verbal_reasoning_choices_36c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_36" name="verbal_reasoning_choices_36" value="{{ verbal_reasoning_choices_36d }}">
+            <label for="verbal_reasoning_choices_36">{{ verbal_reasoning_choices_36d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_37}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">37. {{ verbal_reasoning_question_37 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_37" name="verbal_reasoning_choices_37" value="{{ verbal_reasoning_choices_37a }}">
+            <label for="verbal_reasoning_choices_37">{{ verbal_reasoning_choices_37a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_37" name="verbal_reasoning_choices_37" value="{{ verbal_reasoning_choices_37b }}">
+            <label for="verbal_reasoning_choices_37">{{ verbal_reasoning_choices_37b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_37" name="verbal_reasoning_choices_37" value="{{ verbal_reasoning_choices_37c }}">
+            <label for="verbal_reasoning_choices_37">{{ verbal_reasoning_choices_37c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_37" name="verbal_reasoning_choices_37" value="{{ verbal_reasoning_choices_37d }}">
+            <label for="verbal_reasoning_choices_37">{{ verbal_reasoning_choices_37d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_38}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">38. {{ verbal_reasoning_question_38 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_38" name="verbal_reasoning_choices_38" value="{{ verbal_reasoning_choices_38a }}">
+            <label for="verbal_reasoning_choices_38">{{ verbal_reasoning_choices_38a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_38" name="verbal_reasoning_choices_38" value="{{ verbal_reasoning_choices_38b }}">
+            <label for="verbal_reasoning_choices_38">{{ verbal_reasoning_choices_38b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_38" name="verbal_reasoning_choices_38" value="{{ verbal_reasoning_choices_38c }}">
+            <label for="verbal_reasoning_choices_38">{{ verbal_reasoning_choices_38c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_38" name="verbal_reasoning_choices_38" value="{{ verbal_reasoning_choices_38d }}">
+            <label for="verbal_reasoning_choices_38">{{ verbal_reasoning_choices_38d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_39}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">39. {{ verbal_reasoning_question_39 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_39" name="verbal_reasoning_choices_39" value="{{ verbal_reasoning_choices_39a }}">
+            <label for="verbal_reasoning_choices_39">{{ verbal_reasoning_choices_39a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_39" name="verbal_reasoning_choices_39" value="{{ verbal_reasoning_choices_39b }}">
+            <label for="verbal_reasoning_choices_39">{{ verbal_reasoning_choices_39b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_39" name="verbal_reasoning_choices_39" value="{{ verbal_reasoning_choices_39c }}">
+            <label for="verbal_reasoning_choices_39">{{ verbal_reasoning_choices_39c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_39" name="verbal_reasoning_choices_39" value="{{ verbal_reasoning_choices_39d }}">
+            <label for="verbal_reasoning_choices_39">{{ verbal_reasoning_choices_39d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{verbal_reasoning_pic_40}}" alt="" width="60%" height="300%" style="position: absolute; left: 110%;">
+            <label for="fname">40. {{ verbal_reasoning_question_40 }}</label><br><br>
+            <input type="radio" id="verbal_reasoning_choices_40" name="verbal_reasoning_choices_40" value="{{ verbal_reasoning_choices_40a }}">
+            <label for="verbal_reasoning_choices_40">{{ verbal_reasoning_choices_40a }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_40" name="verbal_reasoning_choices_40" value="{{ verbal_reasoning_choices_40b }}">
+            <label for="verbal_reasoning_choices_40">{{ verbal_reasoning_choices_40b }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_40" name="verbal_reasoning_choices_40" value="{{ verbal_reasoning_choices_40c }}">
+            <label for="verbal_reasoning_choices_40">{{ verbal_reasoning_choices_40c }}</label><br>
+            <input type="radio" id="verbal_reasoning_choices_40" name="verbal_reasoning_choices_40" value="{{ verbal_reasoning_choices_40d }}">
+            <label for="verbal_reasoning_choices_40">{{ verbal_reasoning_choices_40d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            
+            <input type="submit" value="Next Subject" style="font-family:'Segoe UI';  font-size: 25px; background: #00AA00 ;color: #ffffff; width: 30%; height: 50%; position: absolute; left: -2%; text-align: center; border-radius: 10px; font-weight: bold;">
+            <input type="hidden" id="nickname_1" name="custId" value="{{nickname_1}}">
+        </form>
+    </body>
+    <div>Time left = <span id="timer"></span></div>
+    <style>
+         div{
+        background-color:#419D78;
+        color:#EFD0CA;
+        font-size:20px;
+        text-align:center;
+        position: fixed;
+        left:0px;
+        top: 0px;
+        width: 100%;
+        }
+    </style>
+
+    <script>
+        
+        
+        document.getElementById('timer').innerHTML = 12 + ":" + 01;
+        startTimer();
+        document.getElementById("bkg_white").style.height = document.body.scrollHeight - 200;
+        document.getElementById("html").style.height = document.body.scrollHeight +300;
+
+        function startTimer() {
+        var presentTime = document.getElementById('timer').innerHTML;
+        var timeArray = presentTime.split(/[:]+/);
+        var m = timeArray[0];
+        var s = checkSecond((timeArray[1] - 1));
+        if(s==59){m=m-1}
+        if(m<0){
+            document.querySelector("form").submit();
+            return
+        }
+        
+        document.getElementById('timer').innerHTML = m + ":" + s;
+        console.log(m)
+        setTimeout(startTimer, 1000);
+        
+        }
+
+        function checkSecond(sec) {
+        if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+        if (sec < 0) {sec = "59"};
+        return sec;
+        }
+    </script>
+</html>

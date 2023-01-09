@@ -1,0 +1,45 @@
+<html>
+    <title>Home | Taguig City University</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="app-name" content="website_viewer">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="/static/media/logo.png">
+    </head>
+
+    <style>
+        html{
+          height: 100%;
+          margin: auto;
+          width: 100%;
+          overflow-y: hidden;
+          overflow-x: hidden;
+        }
+        
+    </style>
+    
+    <body>
+        <img src="/static/media/home_bg.png" alt="home" width="100%" height="100%" style="position: fixed; left: 0px; top:0px">
+        <img src="/static/media/home2.png" alt="home" width="60%" height="65%" style="position: fixed; left: 20%; top:20%; border-radius: 30px; ">
+
+        <div style="position: fixed; left: 20%; top:20%; width: 60%; height:65%; background: #115555; opacity: 0.7; border-radius: 30px;"></div>
+        
+        <img src="/static/media/logo-tcu.png" alt="home" width="10%" height="20%" style="position: fixed; left: 21%; top:21%; ">
+
+        <h1 style="font-family:'Segoe UI';  font-size: 25px; color: #ffffff; width: 35%; height: 100px; position: absolute; left: 32%; top: 25%; text-align: left; "> Taguig City University</h1>
+        <h1 style="font-family:'Segoe UI';  font-size: 20px; color: #ffffff; width: 35%; height: 100px; position: absolute; left: 32%; top: 30%; text-align: left;"> College Program Recommendation-based System</h1>
+
+
+        <form action="/intro/" method="post">
+            {% csrf_token %}
+            <label for="fname" style="font-family:'Segoe UI';  font-size: 18px; color: #ffffff; width: 35%; height: 100px; position: absolute; left: 32%; top: 40%; text-align: left; font-weight: bold; ">Set your Nickname: </label><br>
+            <input type="text" id="nickname" name="nickname" value="" style="font-family:'Segoe UI';  font-size: 20px; color: #000000; width: 35%; height: 50px; position: absolute; left: 32%; top: 45%; text-align: left;" required><br>
+            <label for="lname" style="font-family:'Segoe UI';  font-size: 18px; color: #ffffff; width: 35%; height: 100px; position: absolute; left: 32%; top: 55%; text-align: left; font-weight: bold; ">General Weighted Average: </label><br>
+            <input type="number" step="any" id="gwa" name="gwa" value="" style="font-family:'Segoe UI';  font-size: 20px; color: #000000; width: 35%; height: 50px; position: absolute; left: 32%; top: 60%; text-align: left;" required><br><br>
+            <input type="submit" value="SUBMIT" style="font-family:'Segoe UI';  font-size: 25px; background: #00AA00 ;color: #ffffff; width: 10%; height: 5%; position: absolute; left: 32%; top: 75%; text-align: center; border-radius: 10px; font-weight: bold;">
+        </form> 
+    </body>
+
+
+
+</html>

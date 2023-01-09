@@ -1,0 +1,384 @@
+<html>
+    <title>Abstract Reasoning | Taguig City University</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="app-name" content="website_viewer">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="/static/media/logo.png">
+    </head>
+    <style>
+        #html{
+          margin: auto;
+          width: 100%;
+          overflow-y: scroll;
+          overflow-x: hidden;
+        }
+    </style>
+    <body>
+        <img src="/static/media/26.png" alt="home" width="100%" height="100%" style="position: fixed; left: 0px; top:0px">
+        <img src="/static/media/adminheader.jpg" alt="home" width="80%" height="30%" style="position: absolute; left: 10%; top:5%; border-radius: 30px; ">
+
+        <div id="bkg_white" style="position: absolute; left: 10%; top:37%; width: 80%; height: auto; background: #FFFFFF; border-radius: 30px;"></div>
+
+        <h1 style="font-family:'Segoe UI';  font-size: 45px; color: #000000; width: 35%; height: 100px; position: absolute; left: 12%; top: 10%; text-align: left; ">Abstract Reasoning</h1>
+
+
+        <form action="/results/" method="post" style="font-family:'Segoe UI';  font-size: 25px; color: #000000; width: 45%; height: 100px; position: absolute; left: 12%; top: 45%; text-align: left; ">
+            {% csrf_token %}
+            <img src="/static/media/{{abstract_reasoning_pic_1}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_1" name="abstract_reasoning_choices_1" value="{{ abstract_reasoning_choices_1a }}">
+            <label for="abstract_reasoning_choices_1">{{ abstract_reasoning_choices_1a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_1" name="abstract_reasoning_choices_1" value="{{ abstract_reasoning_choices_1b }}">
+            <label for="abstract_reasoning_choices_1">{{ abstract_reasoning_choices_1b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_1" name="abstract_reasoning_choices_1" value="{{ abstract_reasoning_choices_1c }}">
+            <label for="abstract_reasoning_choices_1">{{ abstract_reasoning_choices_1c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_1" name="abstract_reasoning_choices_1" value="{{ abstract_reasoning_choices_1d }}">
+            <label for="abstract_reasoning_choices_1">{{ abstract_reasoning_choices_1d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_2}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_2" name="abstract_reasoning_choices_2" value="{{ abstract_reasoning_choices_2a }}">
+            <label for="abstract_reasoning_choices_2">{{ abstract_reasoning_choices_2a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_2" name="abstract_reasoning_choices_2" value="{{ abstract_reasoning_choices_2b }}">
+            <label for="abstract_reasoning_choices_2">{{ abstract_reasoning_choices_2b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_2" name="abstract_reasoning_choices_2" value="{{ abstract_reasoning_choices_2c }}">
+            <label for="abstract_reasoning_choices_2">{{ abstract_reasoning_choices_2c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_2" name="abstract_reasoning_choices_2" value="{{ abstract_reasoning_choices_2d }}">
+            <label for="abstract_reasoning_choices_2">{{ abstract_reasoning_choices_2d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_3}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_3" name="abstract_reasoning_choices_3" value="{{ abstract_reasoning_choices_3a }}">
+            <label for="abstract_reasoning_choices_3">{{ abstract_reasoning_choices_3a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_3" name="abstract_reasoning_choices_3" value="{{ abstract_reasoning_choices_3b }}">
+            <label for="abstract_reasoning_choices_3">{{ abstract_reasoning_choices_3b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_3" name="abstract_reasoning_choices_3" value="{{ abstract_reasoning_choices_3c }}">
+            <label for="abstract_reasoning_choices_3">{{ abstract_reasoning_choices_3c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_3" name="abstract_reasoning_choices_3" value="{{ abstract_reasoning_choices_3d }}">
+            <label for="abstract_reasoning_choices_3">{{ abstract_reasoning_choices_3d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_4}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_4" name="abstract_reasoning_choices_4" value="{{ abstract_reasoning_choices_4a }}">
+            <label for="abstract_reasoning_choices_4">{{ abstract_reasoning_choices_4a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_4" name="abstract_reasoning_choices_4" value="{{ abstract_reasoning_choices_4b }}">
+            <label for="abstract_reasoning_choices_4">{{ abstract_reasoning_choices_4b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_4" name="abstract_reasoning_choices_4" value="{{ abstract_reasoning_choices_4c }}">
+            <label for="abstract_reasoning_choices_4">{{ abstract_reasoning_choices_4c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_4" name="abstract_reasoning_choices_4" value="{{ abstract_reasoning_choices_4d }}">
+            <label for="abstract_reasoning_choices_4">{{ abstract_reasoning_choices_4d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_5}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_5" name="abstract_reasoning_choices_5" value="{{ abstract_reasoning_choices_5a }}">
+            <label for="abstract_reasoning_choices_5">{{ abstract_reasoning_choices_5a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_5" name="abstract_reasoning_choices_5" value="{{ abstract_reasoning_choices_5b }}">
+            <label for="abstract_reasoning_choices_5">{{ abstract_reasoning_choices_5b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_5" name="abstract_reasoning_choices_5" value="{{ abstract_reasoning_choices_5c }}">
+            <label for="abstract_reasoning_choices_5">{{ abstract_reasoning_choices_5c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_5" name="abstract_reasoning_choices_5" value="{{ abstract_reasoning_choices_5d }}">
+            <label for="abstract_reasoning_choices_5">{{ abstract_reasoning_choices_5d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_6}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_6" name="abstract_reasoning_choices_6" value="{{ abstract_reasoning_choices_6a }}">
+            <label for="abstract_reasoning_choices_6">{{ abstract_reasoning_choices_6a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_6" name="abstract_reasoning_choices_6" value="{{ abstract_reasoning_choices_6b }}">
+            <label for="abstract_reasoning_choices_6">{{ abstract_reasoning_choices_6b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_6" name="abstract_reasoning_choices_6" value="{{ abstract_reasoning_choices_6c }}">
+            <label for="abstract_reasoning_choices_6">{{ abstract_reasoning_choices_6c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_6" name="abstract_reasoning_choices_6" value="{{ abstract_reasoning_choices_6d }}">
+            <label for="abstract_reasoning_choices_6">{{ abstract_reasoning_choices_6d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_7}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_7" name="abstract_reasoning_choices_7" value="{{ abstract_reasoning_choices_7a }}">
+            <label for="abstract_reasoning_choices_7">{{ abstract_reasoning_choices_7a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_7" name="abstract_reasoning_choices_7" value="{{ abstract_reasoning_choices_7b }}">
+            <label for="abstract_reasoning_choices_7">{{ abstract_reasoning_choices_7b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_7" name="abstract_reasoning_choices_7" value="{{ abstract_reasoning_choices_7c }}">
+            <label for="abstract_reasoning_choices_7">{{ abstract_reasoning_choices_7c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_7" name="abstract_reasoning_choices_7" value="{{ abstract_reasoning_choices_7d }}">
+            <label for="abstract_reasoning_choices_7">{{ abstract_reasoning_choices_7d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_8}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_8" name="abstract_reasoning_choices_8" value="{{ abstract_reasoning_choices_8a }}">
+            <label for="abstract_reasoning_choices_8">{{ abstract_reasoning_choices_8a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_8" name="abstract_reasoning_choices_8" value="{{ abstract_reasoning_choices_8b }}">
+            <label for="abstract_reasoning_choices_8">{{ abstract_reasoning_choices_8b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_8" name="abstract_reasoning_choices_8" value="{{ abstract_reasoning_choices_8c }}">
+            <label for="abstract_reasoning_choices_8">{{ abstract_reasoning_choices_8c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_8" name="abstract_reasoning_choices_8" value="{{ abstract_reasoning_choices_8d }}">
+            <label for="abstract_reasoning_choices_8">{{ abstract_reasoning_choices_8d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_9}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_9" name="abstract_reasoning_choices_9" value="{{ abstract_reasoning_choices_9a }}">
+            <label for="abstract_reasoning_choices_9">{{ abstract_reasoning_choices_9a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_9" name="abstract_reasoning_choices_9" value="{{ abstract_reasoning_choices_9b }}">
+            <label for="abstract_reasoning_choices_9">{{ abstract_reasoning_choices_9b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_9" name="abstract_reasoning_choices_9" value="{{ abstract_reasoning_choices_9c }}">
+            <label for="abstract_reasoning_choices_9">{{ abstract_reasoning_choices_9c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_9" name="abstract_reasoning_choices_9" value="{{ abstract_reasoning_choices_9d }}">
+            <label for="abstract_reasoning_choices_9">{{ abstract_reasoning_choices_9d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_10}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_10" name="abstract_reasoning_choices_10" value="{{ abstract_reasoning_choices_10a }}">
+            <label for="abstract_reasoning_choices_10">{{ abstract_reasoning_choices_10a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_10" name="abstract_reasoning_choices_10" value="{{ abstract_reasoning_choices_10b }}">
+            <label for="abstract_reasoning_choices_10">{{ abstract_reasoning_choices_10b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_10" name="abstract_reasoning_choices_10" value="{{ abstract_reasoning_choices_10c }}">
+            <label for="abstract_reasoning_choices_10">{{ abstract_reasoning_choices_10c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_10" name="abstract_reasoning_choices_10" value="{{ abstract_reasoning_choices_10d }}">
+            <label for="abstract_reasoning_choices_10">{{ abstract_reasoning_choices_10d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_11}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_11" name="abstract_reasoning_choices_11" value="{{ abstract_reasoning_choices_11a }}">
+            <label for="abstract_reasoning_choices_11">{{ abstract_reasoning_choices_11a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_11" name="abstract_reasoning_choices_11" value="{{ abstract_reasoning_choices_11b }}">
+            <label for="abstract_reasoning_choices_11">{{ abstract_reasoning_choices_11b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_11" name="abstract_reasoning_choices_11" value="{{ abstract_reasoning_choices_11c }}">
+            <label for="abstract_reasoning_choices_11">{{ abstract_reasoning_choices_11c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_11" name="abstract_reasoning_choices_11" value="{{ abstract_reasoning_choices_11d }}">
+            <label for="abstract_reasoning_choices_11">{{ abstract_reasoning_choices_11d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_12}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_12" name="abstract_reasoning_choices_12" value="{{ abstract_reasoning_choices_12a }}">
+            <label for="abstract_reasoning_choices_12">{{ abstract_reasoning_choices_12a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_12" name="abstract_reasoning_choices_12" value="{{ abstract_reasoning_choices_12b }}">
+            <label for="abstract_reasoning_choices_12">{{ abstract_reasoning_choices_12b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_12" name="abstract_reasoning_choices_12" value="{{ abstract_reasoning_choices_12c }}">
+            <label for="abstract_reasoning_choices_12">{{ abstract_reasoning_choices_12c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_12" name="abstract_reasoning_choices_12" value="{{ abstract_reasoning_choices_12d }}">
+            <label for="abstract_reasoning_choices_12">{{ abstract_reasoning_choices_12d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_13}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_13" name="abstract_reasoning_choices_13" value="{{ abstract_reasoning_choices_13a }}">
+            <label for="abstract_reasoning_choices_13">{{ abstract_reasoning_choices_13a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_13" name="abstract_reasoning_choices_13" value="{{ abstract_reasoning_choices_13b }}">
+            <label for="abstract_reasoning_choices_13">{{ abstract_reasoning_choices_13b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_13" name="abstract_reasoning_choices_13" value="{{ abstract_reasoning_choices_13c }}">
+            <label for="abstract_reasoning_choices_13">{{ abstract_reasoning_choices_13c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_13" name="abstract_reasoning_choices_13" value="{{ abstract_reasoning_choices_13d }}">
+            <label for="abstract_reasoning_choices_13">{{ abstract_reasoning_choices_13d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_14}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_14" name="abstract_reasoning_choices_14" value="{{ abstract_reasoning_choices_14a }}">
+            <label for="abstract_reasoning_choices_14">{{ abstract_reasoning_choices_14a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_14" name="abstract_reasoning_choices_14" value="{{ abstract_reasoning_choices_14b }}">
+            <label for="abstract_reasoning_choices_14">{{ abstract_reasoning_choices_14b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_14" name="abstract_reasoning_choices_14" value="{{ abstract_reasoning_choices_14c }}">
+            <label for="abstract_reasoning_choices_14">{{ abstract_reasoning_choices_14c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_14" name="abstract_reasoning_choices_14" value="{{ abstract_reasoning_choices_14d }}">
+            <label for="abstract_reasoning_choices_14">{{ abstract_reasoning_choices_14d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_15}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_15" name="abstract_reasoning_choices_15" value="{{ abstract_reasoning_choices_15a }}">
+            <label for="abstract_reasoning_choices_15">{{ abstract_reasoning_choices_15a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_15" name="abstract_reasoning_choices_15" value="{{ abstract_reasoning_choices_15b }}">
+            <label for="abstract_reasoning_choices_15">{{ abstract_reasoning_choices_15b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_15" name="abstract_reasoning_choices_15" value="{{ abstract_reasoning_choices_15c }}">
+            <label for="abstract_reasoning_choices_15">{{ abstract_reasoning_choices_15c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_15" name="abstract_reasoning_choices_15" value="{{ abstract_reasoning_choices_15d }}">
+            <label for="abstract_reasoning_choices_15">{{ abstract_reasoning_choices_15d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_16}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_16" name="abstract_reasoning_choices_16" value="{{ abstract_reasoning_choices_16a }}">
+            <label for="abstract_reasoning_choices_16">{{ abstract_reasoning_choices_16a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_16" name="abstract_reasoning_choices_16" value="{{ abstract_reasoning_choices_16b }}">
+            <label for="abstract_reasoning_choices_16">{{ abstract_reasoning_choices_16b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_16" name="abstract_reasoning_choices_16" value="{{ abstract_reasoning_choices_16c }}">
+            <label for="abstract_reasoning_choices_16">{{ abstract_reasoning_choices_16c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_16" name="abstract_reasoning_choices_16" value="{{ abstract_reasoning_choices_16d }}">
+            <label for="abstract_reasoning_choices_16">{{ abstract_reasoning_choices_16d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_17}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_17" name="abstract_reasoning_choices_17" value="{{ abstract_reasoning_choices_17a }}">
+            <label for="abstract_reasoning_choices_17">{{ abstract_reasoning_choices_17a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_17" name="abstract_reasoning_choices_17" value="{{ abstract_reasoning_choices_17b }}">
+            <label for="abstract_reasoning_choices_17">{{ abstract_reasoning_choices_17b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_17" name="abstract_reasoning_choices_17" value="{{ abstract_reasoning_choices_17c }}">
+            <label for="abstract_reasoning_choices_17">{{ abstract_reasoning_choices_17c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_17" name="abstract_reasoning_choices_17" value="{{ abstract_reasoning_choices_17d }}">
+            <label for="abstract_reasoning_choices_17">{{ abstract_reasoning_choices_17d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_18}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_18" name="abstract_reasoning_choices_18" value="{{ abstract_reasoning_choices_18a }}">
+            <label for="abstract_reasoning_choices_18">{{ abstract_reasoning_choices_18a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_18" name="abstract_reasoning_choices_18" value="{{ abstract_reasoning_choices_18b }}">
+            <label for="abstract_reasoning_choices_18">{{ abstract_reasoning_choices_18b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_18" name="abstract_reasoning_choices_18" value="{{ abstract_reasoning_choices_18c }}">
+            <label for="abstract_reasoning_choices_18">{{ abstract_reasoning_choices_18c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_18" name="abstract_reasoning_choices_18" value="{{ abstract_reasoning_choices_18d }}">
+            <label for="abstract_reasoning_choices_18">{{ abstract_reasoning_choices_18d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_19}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_19" name="abstract_reasoning_choices_19" value="{{ abstract_reasoning_choices_19a }}">
+            <label for="abstract_reasoning_choices_19">{{ abstract_reasoning_choices_19a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_19" name="abstract_reasoning_choices_19" value="{{ abstract_reasoning_choices_19b }}">
+            <label for="abstract_reasoning_choices_19">{{ abstract_reasoning_choices_19b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_19" name="abstract_reasoning_choices_19" value="{{ abstract_reasoning_choices_19c }}">
+            <label for="abstract_reasoning_choices_19">{{ abstract_reasoning_choices_19c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_19" name="abstract_reasoning_choices_19" value="{{ abstract_reasoning_choices_19d }}">
+            <label for="abstract_reasoning_choices_19">{{ abstract_reasoning_choices_19d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            <img src="/static/media/{{abstract_reasoning_pic_20}}" alt="" width="60%" height="300%" style="position: absolute; left: 0;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="radio" id="abstract_reasoning_choices_20" name="abstract_reasoning_choices_20" value="{{ abstract_reasoning_choices_20a }}">
+            <label for="abstract_reasoning_choices_20">{{ abstract_reasoning_choices_20a }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_20" name="abstract_reasoning_choices_20" value="{{ abstract_reasoning_choices_20b }}">
+            <label for="abstract_reasoning_choices_20">{{ abstract_reasoning_choices_20b }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_20" name="abstract_reasoning_choices_20" value="{{ abstract_reasoning_choices_20c }}">
+            <label for="abstract_reasoning_choices_20">{{ abstract_reasoning_choices_20c }}</label><br>
+            <input type="radio" id="abstract_reasoning_choices_20" name="abstract_reasoning_choices_20" value="{{ abstract_reasoning_choices_20d }}">
+            <label for="abstract_reasoning_choices_20">{{ abstract_reasoning_choices_20d }}</label><br>
+            
+            
+            <br><br>
+            
+            
+            
+            
+            
+            
+            
+            
+            <input type="submit" value="Submit" style="font-family:'Segoe UI';  font-size: 25px; background: #00AA00 ;color: #ffffff; width: 30%; height: 50%; position: absolute; left: -2%; text-align: center; border-radius: 10px; font-weight: bold;">
+            <input type="hidden" id="nickname_1" name="custId" value="{{nickname_1}}">
+        </form>
+    </body>
+
+    <div>Time left = <span id="timer"></span></div>
+    <style>
+         div{
+        background-color:#419D78;
+        color:#EFD0CA;
+        font-size:20px;
+        text-align:center;
+        position: fixed;
+        left:0px;
+        top: 0px;
+        width: 100%;
+        }
+    </style>
+
+    <script>
+        
+        
+        document.getElementById('timer').innerHTML = 12 + ":" + 01;
+        startTimer();
+        document.getElementById("bkg_white").style.height = document.body.scrollHeight - 200;
+        document.getElementById("html").style.height = document.body.scrollHeight +300;
+
+        function startTimer() {
+        var presentTime = document.getElementById('timer').innerHTML;
+        var timeArray = presentTime.split(/[:]+/);
+        var m = timeArray[0];
+        var s = checkSecond((timeArray[1] - 1));
+        if(s==59){m=m-1}
+        if(m<0){
+            document.querySelector("form").submit();
+            return
+        }
+        
+        document.getElementById('timer').innerHTML = m + ":" + s;
+        console.log(m)
+        setTimeout(startTimer, 1000);
+        
+        }
+
+        function checkSecond(sec) {
+        if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+        if (sec < 0) {sec = "59"};
+        return sec;
+        }
+    </script>
+</html>
