@@ -156,7 +156,8 @@ class MyViews:
 
         data = list(self.db1.getQuestionsByCat(self.dictConv[subject]))
         #print(isinstance(data,list))
-        
+        if not("abstract" in subject):
+            random.shuffle(data)
         dict1 = {
             subject+"_question_1" : "No Question Added in Database",
             subject+"_choices_1a" : "NO Choice A",
@@ -174,7 +175,7 @@ class MyViews:
                 choices = list(data[i][2:6])
                 if not("abstract" in subject):
                     random.shuffle(choices)
-                    random.shuffle(data)
+                    
                     if isinstance(data[i][7],str):
                         dict2[subject+"_pic_"+str(i+1)] = data[i][7]
                     else:
