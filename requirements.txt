@@ -1,0 +1,8 @@
+django
+django-clearcache
+pillow
+opencv-python==4.4.0.40
+scikit-learn
+numpy
+tensorflow
+matplotlib
