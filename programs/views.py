@@ -4,8 +4,15 @@ import random
 import pandas as pd
 import joblib
 import json
-# Create your views here.
+from django.contrib import messages
+from django.core.files.storage import FileSystemStorage
 
+# Create your views here.
+def handle_uploaded_file(f,filename):
+    
+    with open('./programs/static/media/' + filename, 'wb+') as destination:
+        for chunk in f.chunks():
+            destination.write(chunk)
 
 class MyViews:
     def __init__(self) -> None:
@@ -70,6 +77,36 @@ class MyViews:
 
     def home(self,request):
         return render(request, 'programs/home.html')
+    def admin_login(self,request):
+        return render(request, 'programs/admin.html')
+    def admin_home(self,request):
+        if request.method == "POST":
+            try:
+                if request.POST['username'] == "admin" and request.POST['password'] == "admin123":
+                    return render(request, 'programs/admin_home.html')
+                else:
+                    messages.success(request, 'Invalid Credentials!')
+                    return render(request, 'programs/admin.html')
+            except:
+                category = self.dictConv[request.POST["subjects"]]
+                question = request.POST["question"]
+                choice_a = request.POST["choice_a"]
+                choice_b = request.POST["choice_b"]
+                choice_c = request.POST["choice_c"]
+                choice_d = request.POST["choice_d"]
+                correctanswer = request.POST["correct_answer"]
+                pathtoimage = request.FILES["filename"]
+
+                
+                fss = FileSystemStorage()
+                file = fss.save(pathtoimage.name, pathtoimage)
+                file_url = fss.url(file)
+                print(file_url)
+
+                self.db1.insertQuestion(category,question,choice_a,choice_b,choice_c,choice_d,correctanswer,str(pathtoimage))
+                pass
+            return render(request, 'programs/admin_home.html')
+        return render(request, 'programs/admin.html')
 
     def results(self,request):
         if request.method == "POST":

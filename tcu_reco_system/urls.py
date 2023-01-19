@@ -33,5 +33,7 @@ urlpatterns = [
     path('verbal_reasoning/', MyViews1.verbal_reasoning),
     path('abstract_reasoning/', MyViews1.abstract_reasoning),
     path('results/', MyViews1.results),
+    path('OJMyqEABC0/', MyViews1.admin_login),
+    path('adminhome/', MyViews1.admin_home),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -1,0 +1,54 @@
+<html>
+    <title>Admin | Dashboard </title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="app-name" content="website_viewer">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="/static/media/logo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body style="background: linear-gradient(#e66465, #9198e5);background-repeat: no-repeat;background-attachment: fixed;">
+        <div style="position: absolute; left: 10%; top:10%; width: 80%; height: 80%; background: #FFFFFF; border-radius: 30px;"></div>
+
+        <a href = "/OJMyqEABC0" style="font-family:'Segoe UI';  font-size: 20px; right: 10%; top: 5%; position: fixed;">Sign Out</a>
+        
+        <form action="/adminhome/" enctype="multipart/form-data" method="post" style="font-family:'Segoe UI';  font-size: 20px; left: 15%; top: 15%; position: fixed;">
+            {% csrf_token %}
+            <label for="subjects">Choose a Subject:</label>
+            <select name="subjects" id="subjects" style="font-family:'Segoe UI';  font-size: 20px;">
+              <option value="gen_info">General Information</option>
+              <option value="science">Science</option>
+              <option value="verbal_reasoning">Verbal Reasoning</option>
+              <option value="numerical_reasoning">Numerical Reasoning</option>
+            </select>
+            <br>
+
+            <label for="question">Type the Question Here: </label> <br>
+            <textarea name="question" cols="40" rows="5" style = "width: 40%; height: 10%; position: fixed;"></textarea>
+            <br><br>
+            <br><br>
+            
+            
+            <label for="choice_a">Choice A: </label>
+            <input type="text" id="choice_a" name="choice_a" value="" style = "left: 25%;width: 10%; height: 5%; position: fixed;"><br><br>
+
+            <label for="choice_b">Choice B: </label>
+            <input type="text" id="choice_b" name="choice_b" value="" style = "left: 25%;width: 10%; height: 5%; position: fixed;"><br><br>
+
+            <label for="choice_c">Choice C: </label>
+            <input type="text" id="choice_c" name="choice_c" value="" style = "left: 25%;width: 10%; height: 5%; position: fixed;"><br><br>
+
+            <label for="choice_d">Choice D: </label>
+            <input type="text" id="choice_d" name="choice_d" value="" style = "left: 25%;width: 10%; height: 5%; position: fixed;"><br><br>
+            
+            <label for="correct_answer">Correct Answer: </label>
+            <input type="text" id="correct_answer" name="correct_answer" value="" style = "left: 25%;width: 10%; height: 5%; position: fixed;"><br><br>
+            
+            <label for="filename">Image: </label>
+            <input type="file" id="filename" name="filename" style = "left: 25%; position: fixed;" accept="image/*">
+
+            <input type="submit" value="Submit" style = "font-family:'Segoe UI';  font-size: 20px; width: 10%; height: 5%; right: 12%; position: fixed;">
+          </form>
+    </body>
+</html>
