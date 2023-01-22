@@ -76,7 +76,7 @@ class MyViews:
         return s
 
     def home(self,request):
-        return render(request, 'programs/home.html')
+        return render(request, 'programs/edithome.html')
     def admin_login(self,request):
         return render(request, 'programs/admin.html')
     def admin_home(self,request):
@@ -132,11 +132,12 @@ class MyViews:
             "score_5": AR,
 
             }
+            
             if len(self.results[0])>0:
-                nickname = request.POST['custId']
+                nickname = request.POST['submits']
                 while (nickname!=self.nickname):
                     pass
-                return render(request, 'programs/results.html' , dict2)
+                return render(request, 'programs/editedresult.html' , dict2)
 
         return render(request, 'programs/redirecting.html')
 
@@ -149,12 +150,12 @@ class MyViews:
             dict1 = {
                 "nickname": self.nickname,
                 }
-            return render(request, 'programs/Intro.html', dict1)
+            return render(request, 'programs/editedintro.html', dict1)
         return render(request, 'programs/redirecting.html')
     
     def gen_info(self,request):
         if request.method == "POST":
-            return render(request, 'programs/gen_info.html', self.load_questionnaire("gen_info")) 
+            return render(request, 'programs/editedgeninfo.html', self.load_questionnaire("gen_info")) 
         return render(request, 'programs/redirecting.html')
 
     def science(self,request):
@@ -162,7 +163,7 @@ class MyViews:
         if request.method == "POST":
             self.check_answer_sheet(request,self.answer_keys["gen_info"],"gen_info")
             
-            return render(request, 'programs/science.html' , self.load_questionnaire("science"))
+            return render(request, 'programs/editedscience.html' , self.load_questionnaire("science"))
         return render(request, 'programs/redirecting.html')
 
 
@@ -171,7 +172,7 @@ class MyViews:
         if request.method == "POST":
             self.check_answer_sheet(request,self.answer_keys["science"],"science")
             
-            return render(request, 'programs/numerical_reasoning.html' , self.load_questionnaire("numerical_reasoning"))
+            return render(request, 'programs/editednumerical.html' , self.load_questionnaire("numerical_reasoning"))
         return render(request, 'programs/redirecting.html')
 
     def verbal_reasoning(self,request):
@@ -179,14 +180,14 @@ class MyViews:
         if request.method == "POST":
             self.check_answer_sheet(request,self.answer_keys["numerical_reasoning"],"numerical_reasoning")
             
-            return render(request, 'programs/verbal_reasoning.html' , self.load_questionnaire("verbal_reasoning"))
+            return render(request, 'programs/editedverbal.html' , self.load_questionnaire("verbal_reasoning"))
         return render(request, 'programs/redirecting.html')
     def abstract_reasoning(self,request):
         
         if request.method == "POST":
             self.check_answer_sheet(request,self.answer_keys["verbal_reasoning"],"verbal_reasoning")
             
-            return render(request, 'programs/abstract_reasoning.html' , self.load_questionnaire("abstract_reasoning"))
+            return render(request, 'programs/editedabstract.html' , self.load_questionnaire("abstract_reasoning"))
         return render(request, 'programs/redirecting.html')
 
     def load_questionnaire(self,subject=""):
@@ -243,9 +244,12 @@ class MyViews:
         
 
         lst = []
+        #print(request.POST)
         for a in range(40):
             try:
+                
                 lst.append(answersheet[a]==request.POST[subject+'_choices_'+str(a+1)])
+                #print(subject+'_choices_'+str(a+1))
             except:
                 lst.append(False)
         if not("abstract" in subject):

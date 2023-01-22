@@ -1,0 +1,1184 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="app-name" content="website_viewer" />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Verbal Reasoning | College Recommendation System</title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			text-decoration: none;
+			font-family: 'Segoe Ui';
+			color: black;
+			transition: 0.2s ease-in;
+			user-select: none;
+			-webkit-user-select: none;
+		}
+
+		body {
+			background: linear-gradient(#e66465, #9198e5);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			width: 100vw;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0 4rem;
+		}
+
+		.timer {
+			width: 100vw;
+			height: 8vh;
+			background-color: black;
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 22px;
+			font-weight: bold;
+			position: sticky;
+			top: 0;
+			left: 0;
+		}
+
+		#timer {
+			color: white;
+		}
+
+		.title {
+			background-image: url('/static/media/subTextLogo.png');
+			background-size: 100% 100%;
+			border: 2px solid black;
+			width: 100%;
+			height: 150px;
+			color: black;
+			font-size: 56px;
+			font-weight: bolder;
+			padding: 2rem 4rem;
+			border-radius: 10px;
+		}
+
+		.questions {
+			width: 100%;
+			background-color: white;
+			border: 2px solid black;
+			border-radius: 10px;
+			padding: 0.5rem 2rem;
+		}
+
+		.questions .questionnaires {
+			padding: 1rem 0;
+		}
+
+		.questions .questionnaires .textquestions {
+			font-size: 24px;
+			font-weight: bold;
+		}
+
+		.questions .questionnaires .choices {
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+			padding: 0 2rem;
+		}
+
+		.questions .questionnaires .choices label {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+
+		.questions .questionnaires .choices .radios {
+			height: 25px;
+			width: 25px;
+		}
+
+		.questions .buttonbox {
+			position: relative;
+			width: 250px;
+			height: 60px;
+			margin: 0 0 2rem 3rem;
+			border-radius: 10px;
+		}
+
+		.questions .buttonbox .submits {
+			position: relative;
+			font-size: 22px;
+			font-weight: bold;
+			border-radius: 10px;
+			border: none;
+			color: transparent;
+			background: none;
+			outline: none;
+			width: 100%;
+			height: 100%;
+			z-index: 10;
+			cursor: pointer;
+		}
+
+		.questions .buttonbox .btnbg {
+			position: absolute;
+			font-size: 22px;
+			font-weight: bold;
+			text-align: center;
+			width: 100%;
+			height: 100%;
+			padding: 0.5rem 0;
+			text-transform: uppercase;
+			border-radius: 10px;
+			border: 2px solid transparent;
+			background: #e664649c;
+			z-index: 1;
+		}
+
+		.questions .buttonbox:hover > .btnbg {
+			color: white;
+			background-color: #e66465;
+			border: 2px solid black;
+		}
+	</style>
+	<body onmousedown="return false" onselect="return false">
+		<div class="timer">TIME LEFT:&nbsp;<span id="timer">00:00</span></div>
+		<div class="title">Verbal Reasoning</div>
+		<form action="/results/" method="post" class="questions">
+			{% csrf_token %}
+			<!-- Questionnaire Start -->
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">1.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract1.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_1"
+							id="abstract_reasoning_choices_1"
+							class="radios"
+							value="{{ abstract_reasoning_choices_1a }}" />
+						<img src="/static/media/abstract1A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_1"
+							id="abstract_reasoning_choices_1"
+							class="radios"
+							value="{{ abstract_reasoning_choices_1b }}" />
+						<img src="/static/media/abstract1B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_1"
+							id="abstract_reasoning_choices_1"
+							class="radios"
+							value="{{ abstract_reasoning_choices_1c }}" />
+						<img src="/static/media/abstract1C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_1"
+							id="abstract_reasoning_choices_1"
+							class="radios"
+							value="{{ abstract_reasoning_choices_1d }}" />
+						<img src="/static/media/abstract1D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">2.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract2.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_2"
+							id="abstract_reasoning_choices_2"
+							class="radios"
+							value="{{ abstract_reasoning_choices_2a }}" />
+						<img src="/static/media/abstract2A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_2"
+							id="abstract_reasoning_choices_2"
+							class="radios"
+							value="{{ abstract_reasoning_choices_2b }}" />
+						<img src="/static/media/abstract2B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_2"
+							id="abstract_reasoning_choices_2"
+							class="radios"
+							value="{{ abstract_reasoning_choices_2c }}" />
+						<img src="/static/media/abstract2C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_2"
+							id="abstract_reasoning_choices_2"
+							class="radios"
+							value="{{ abstract_reasoning_choices_2d }}" />
+						<img src="/static/media/abstract2D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">3.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract3.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_3"
+							id="abstract_reasoning_choices_3"
+							class="radios"
+							value="{{ abstract_reasoning_choices_3a }}" />
+						<img src="/static/media/abstract3A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_3"
+							id="abstract_reasoning_choices_3"
+							class="radios"
+							value="{{ abstract_reasoning_choices_3b }}" />
+						<img src="/static/media/abstract3B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_3"
+							id="abstract_reasoning_choices_3"
+							class="radios"
+							value="{{ abstract_reasoning_choices_3c }}" />
+						<img src="/static/media/abstract3C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_3"
+							id="abstract_reasoning_choices_3"
+							class="radios"
+							value="{{ abstract_reasoning_choices_3d }}" />
+						<img src="/static/media/abstract3D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">4.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract4.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_4"
+							id="abstract_reasoning_choices_4"
+							class="radios"
+							value="{{ abstract_reasoning_choices_4a }}" />
+						<img src="/static/media/abstract4A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_4"
+							id="abstract_reasoning_choices_4"
+							class="radios"
+							value="{{ abstract_reasoning_choices_4b }}" />
+						<img src="/static/media/abstract4B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_4"
+							id="abstract_reasoning_choices_4"
+							class="radios"
+							value="{{ abstract_reasoning_choices_4c }}" />
+						<img src="/static/media/abstract4C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_4"
+							id="abstract_reasoning_choices_4"
+							class="radios"
+							value="{{ abstract_reasoning_choices_4d }}" />
+						<img src="/static/media/abstract4D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">5.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract5.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_5"
+							id="abstract_reasoning_choices_5"
+							class="radios"
+							value="{{ abstract_reasoning_choices_5a }}" />
+						<img src="/static/media/abstract5A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_5"
+							id="abstract_reasoning_choices_5"
+							class="radios"
+							value="{{ abstract_reasoning_choices_5b }}" />
+						<img src="/static/media/abstract5B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_5"
+							id="abstract_reasoning_choices_5"
+							class="radios"
+							value="{{ abstract_reasoning_choices_5c }}" />
+						<img src="/static/media/abstract5C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_5"
+							id="abstract_reasoning_choices_5"
+							class="radios"
+							value="{{ abstract_reasoning_choices_5d }}" />
+						<img src="/static/media/abstract5D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">6.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract6.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_6"
+							id="abstract_reasoning_choices_6"
+							class="radios"
+							value="{{ abstract_reasoning_choices_6a }}" />
+						<img src="/static/media/abstract6A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_6"
+							id="abstract_reasoning_choices_6"
+							class="radios"
+							value="{{ abstract_reasoning_choices_6b }}" />
+						<img src="/static/media/abstract6B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_6"
+							id="abstract_reasoning_choices_6"
+							class="radios"
+							value="{{ abstract_reasoning_choices_6c }}" />
+						<img src="/static/media/abstract6C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_6"
+							id="abstract_reasoning_choices_6"
+							class="radios"
+							value="{{ abstract_reasoning_choices_6d }}" />
+						<img src="/static/media/abstract6D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">7.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract7.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_7"
+							id="abstract_reasoning_choices_7"
+							class="radios"
+							value="{{ abstract_reasoning_choices_7a }}" />
+						<img src="/static/media/abstract7A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_7"
+							id="abstract_reasoning_choices_7"
+							class="radios"
+							value="{{ abstract_reasoning_choices_7b }}" />
+						<img src="/static/media/abstract7B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_7"
+							id="abstract_reasoning_choices_7"
+							class="radios"
+							value="{{ abstract_reasoning_choices_7c }}" />
+						<img src="/static/media/abstract7C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_7"
+							id="abstract_reasoning_choices_7"
+							class="radios"
+							value="{{ abstract_reasoning_choices_7d }}" />
+						<img src="/static/media/abstract7D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">8.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract8.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_8"
+							id="abstract_reasoning_choices_8"
+							class="radios"
+							value="{{ abstract_reasoning_choices_8a }}" />
+						<img src="/static/media/abstract8A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_8"
+							id="abstract_reasoning_choices_8"
+							class="radios"
+							value="{{ abstract_reasoning_choices_8b }}" />
+						<img src="/static/media/abstract8B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_8"
+							id="abstract_reasoning_choices_8"
+							class="radios"
+							value="{{ abstract_reasoning_choices_8c }}" />
+						<img src="/static/media/abstract8C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_8"
+							id="abstract_reasoning_choices_8"
+							class="radios"
+							value="{{ abstract_reasoning_choices_8d }}" />
+						<img src="/static/media/abstract8D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">9.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract9.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_9"
+							id="abstract_reasoning_choices_9"
+							class="radios"
+							value="{{ abstract_reasoning_choices_9a }}" />
+						<img src="/static/media/abstract9A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_9"
+							id="abstract_reasoning_choices_9"
+							class="radios"
+							value="{{ abstract_reasoning_choices_9b }}" />
+						<img src="/static/media/abstract9B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_9"
+							id="abstract_reasoning_choices_9"
+							class="radios"
+							value="{{ abstract_reasoning_choices_9c }}" />
+						<img src="/static/media/abstract9C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_9"
+							id="abstract_reasoning_choices_9"
+							class="radios"
+							value="{{ abstract_reasoning_choices_9d }}" />
+						<img src="/static/media/abstract9D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">10.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract10.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_10"
+							id="abstract_reasoning_choices_10"
+							class="radios"
+							value="{{ abstract_reasoning_choices_10a }}" />
+						<img src="/static/media/abstract10A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_10"
+							id="abstract_reasoning_choices_10"
+							class="radios"
+							value="{{ abstract_reasoning_choices_10b }}" />
+						<img src="/static/media/abstract10B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_10"
+							id="abstract_reasoning_choices_10"
+							class="radios"
+							value="{{ abstract_reasoning_choices_10c }}" />
+						<img src="/static/media/abstract10C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_10"
+							id="abstract_reasoning_choices_10"
+							class="radios"
+							value="{{ abstract_reasoning_choices_10d }}" />
+						<img src="/static/media/abstract10D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">11.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract11.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_11"
+							id="abstract_reasoning_choices_11"
+							class="radios"
+							value="{{ abstract_reasoning_choices_11a }}" />
+						<img src="/static/media/abstract11A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_11"
+							id="abstract_reasoning_choices_11"
+							class="radios"
+							value="{{ abstract_reasoning_choices_11b }}" />
+						<img src="/static/media/abstract11B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_11"
+							id="abstract_reasoning_choices_11"
+							class="radios"
+							value="{{ abstract_reasoning_choices_11c }}" />
+						<img src="/static/media/abstract11C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_11"
+							id="abstract_reasoning_choices_11"
+							class="radios"
+							value="{{ abstract_reasoning_choices_11d }}" />
+						<img src="/static/media/abstract11D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">12.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract12.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_12"
+							id="abstract_reasoning_choices_12"
+							class="radios"
+							value="{{ abstract_reasoning_choices_12a }}" />
+						<img src="/static/media/abstract12A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_12"
+							id="abstract_reasoning_choices_12"
+							class="radios"
+							value="{{ abstract_reasoning_choices_12b }}" />
+						<img src="/static/media/abstract12B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_12"
+							id="abstract_reasoning_choices_12"
+							class="radios"
+							value="{{ abstract_reasoning_choices_12c }}" />
+						<img src="/static/media/abstract12C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_12"
+							id="abstract_reasoning_choices_12"
+							class="radios"
+							value="{{ abstract_reasoning_choices_12d }}" />
+						<img src="/static/media/abstract12D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">13.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract13.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_13"
+							id="abstract_reasoning_choices_13"
+							class="radios"
+							value="{{ abstract_reasoning_choices_13a }}" />
+						<img src="/static/media/abstract13A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_13"
+							id="abstract_reasoning_choices_13"
+							class="radios"
+							value="{{ abstract_reasoning_choices_13b }}" />
+						<img src="/static/media/abstract13B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_13"
+							id="abstract_reasoning_choices_13"
+							class="radios"
+							value="{{ abstract_reasoning_choices_13c }}" />
+						<img src="/static/media/abstract13C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_13"
+							id="abstract_reasoning_choices_13"
+							class="radios"
+							value="{{ abstract_reasoning_choices_13d }}" />
+						<img src="/static/media/abstract13D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">14.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract14.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_14"
+							id="abstract_reasoning_choices_14"
+							class="radios"
+							value="{{ abstract_reasoning_choices_14a }}" />
+						<img src="/static/media/abstract14A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_14"
+							id="abstract_reasoning_choices_14"
+							class="radios"
+							value="{{ abstract_reasoning_choices_14b }}" />
+						<img src="/static/media/abstract14B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_14"
+							id="abstract_reasoning_choices_14"
+							class="radios"
+							value="{{ abstract_reasoning_choices_14c }}" />
+						<img src="/static/media/abstract14C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_14"
+							id="abstract_reasoning_choices_14"
+							class="radios"
+							value="{{ abstract_reasoning_choices_14d }}" />
+						<img src="/static/media/abstract14D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">15.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract15.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_15"
+							id="abstract_reasoning_choices_15"
+							class="radios"
+							value="{{ abstract_reasoning_choices_15a }}" />
+						<img src="/static/media/abstract15A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_15"
+							id="abstract_reasoning_choices_15"
+							class="radios"
+							value="{{ abstract_reasoning_choices_15b }}" />
+						<img src="/static/media/abstract15B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_15"
+							id="abstract_reasoning_choices_15"
+							class="radios"
+							value="{{ abstract_reasoning_choices_15c }}" />
+						<img src="/static/media/abstract15C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_15"
+							id="abstract_reasoning_choices_15"
+							class="radios"
+							value="{{ abstract_reasoning_choices_15d }}" />
+						<img src="/static/media/abstract15D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">16.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract16.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_16"
+							id="abstract_reasoning_choices_16"
+							class="radios"
+							value="{{ abstract_reasoning_choices_16a }}" />
+						<img src="/static/media/abstract16A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_16"
+							id="abstract_reasoning_choices_16"
+							class="radios"
+							value="{{ abstract_reasoning_choices_16b }}" />
+						<img src="/static/media/abstract16B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_16"
+							id="abstract_reasoning_choices_16"
+							class="radios"
+							value="{{ abstract_reasoning_choices_16c }}" />
+						<img src="/static/media/abstract16C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_16"
+							id="abstract_reasoning_choices_16"
+							class="radios"
+							value="{{ abstract_reasoning_choices_16d }}" />
+						<img src="/static/media/abstract16D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">17.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract17.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_17"
+							id="abstract_reasoning_choices_17"
+							class="radios"
+							value="{{ abstract_reasoning_choices_17a }}" />
+						<img src="/static/media/abstract17A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_17"
+							id="abstract_reasoning_choices_17"
+							class="radios"
+							value="{{ abstract_reasoning_choices_17b }}" />
+						<img src="/static/media/abstract17B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_17"
+							id="abstract_reasoning_choices_17"
+							class="radios"
+							value="{{ abstract_reasoning_choices_17c }}" />
+						<img src="/static/media/abstract17C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_17"
+							id="abstract_reasoning_choices_17"
+							class="radios"
+							value="{{ abstract_reasoning_choices_17d }}" />
+						<img src="/static/media/abstract17D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">18.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract18.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_18"
+							id="abstract_reasoning_choices_18"
+							class="radios"
+							value="{{ abstract_reasoning_choices_18a }}" />
+						<img src="/static/media/abstract18A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_18"
+							id="abstract_reasoning_choices_18"
+							class="radios"
+							value="{{ abstract_reasoning_choices_18b }}" />
+						<img src="/static/media/abstract18B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_18"
+							id="abstract_reasoning_choices_18"
+							class="radios"
+							value="{{ abstract_reasoning_choices_18c }}" />
+						<img src="/static/media/abstract18C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_18"
+							id="abstract_reasoning_choices_18"
+							class="radios"
+							value="{{ abstract_reasoning_choices_18d }}" />
+						<img src="/static/media/abstract18D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">19.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract19.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_19"
+							id="abstract_reasoning_choices_19"
+							class="radios"
+							value="{{ abstract_reasoning_choices_19a }}" />
+						<img src="/static/media/abstract19A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_19"
+							id="abstract_reasoning_choices_19"
+							class="radios"
+							value="{{ abstract_reasoning_choices_19b }}" />
+						<img src="/static/media/abstract19B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_19"
+							id="abstract_reasoning_choices_19"
+							class="radios"
+							value="{{ abstract_reasoning_choices_19c }}" />
+						<img src="/static/media/abstract19C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_19"
+							id="abstract_reasoning_choices_19"
+							class="radios"
+							value="{{ abstract_reasoning_choices_19d }}" />
+						<img src="/static/media/abstract19D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+			<div class="questionnaires">
+				<div class="textquestions">
+					<span class="numbering">20.&nbsp;&nbsp;</span>
+					<!-- Local Format Img -->
+					<img src="/static/media/abstract.jpg" alt="" class="qimg" />
+					<!-- Publish Format Img -->
+					<img src="/static/media/abstract20.jpg" alt="" class="qimg" />
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_20"
+							id="abstract_reasoning_choices_20"
+							class="radios"
+							value="{{ abstract_reasoning_choices_20a }}" />
+						<img src="/static/media/abstract20A.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_20"
+							id="abstract_reasoning_choices_20"
+							class="radios"
+							value="{{ abstract_reasoning_choices_20b }}" />
+						<img src="/static/media/abstract20B.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+				<div class="choices">
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_20"
+							id="abstract_reasoning_choices_20"
+							class="radios"
+							value="{{ abstract_reasoning_choices_20c }}" />
+						<img src="/static/media/abstract20C.jpg" alt="" class="ansimg" />
+					</label>
+					<label
+						><input
+							type="radio"
+							name="abstract_reasoning_choices_20"
+							id="abstract_reasoning_choices_20"
+							class="radios"
+							value="{{ abstract_reasoning_choices_20d }}" />
+						<img src="/static/media/abstract20D.jpg" alt="" class="ansimg" />
+					</label>
+				</div>
+			</div>
+
+			<!-- Questionnaire End -->
+			<div class="buttonbox">
+				<label for="submits" class="btnbg">Submit</label>
+				<input
+					type="submit"
+					name="submits"
+					id="nickname_1"
+					value="{{nickname_1}}"
+					class="submits" />
+			</div>
+		</form>
+	</body>
+	<script>
+		document.getElementById('timer').innerHTML = 12 + ':' + 01;
+		startTimer();
+		document.getElementById('bkg_white').style.height =
+			document.body.scrollHeight - 200;
+		document.getElementById('html').style.height =
+			document.body.scrollHeight + 300;
+
+		function startTimer() {
+			var presentTime = document.getElementById('timer').innerHTML;
+			var timeArray = presentTime.split(/[:]+/);
+			var m = timeArray[0];
+			var s = checkSecond(timeArray[1] - 1);
+			if (s == 59) {
+				m = m - 1;
+			}
+			if (m < 0) {
+				document.querySelector('form').submit();
+				return;
+			}
+
+			document.getElementById('timer').innerHTML = m + ':' + s;
+			console.log(m);
+			setTimeout(startTimer, 1000);
+		}
+
+		function checkSecond(sec) {
+			if (sec < 10 && sec >= 0) {
+				sec = '0' + sec;
+			} // add zero in front of numbers < 10
+			if (sec < 0) {
+				sec = '59';
+			}
+			return sec;
+		}
+	</script>
+</html>

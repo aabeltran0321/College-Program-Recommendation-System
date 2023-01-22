@@ -1,0 +1,151 @@
+<!-- @format -->
+
+<html>
+	<title>Home | College Recommendation System</title>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="app-name" content="website_viewer" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/x-icon" href="/static/media/logo.png" />
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			text-decoration: none;
+			font-family: 'Segoe Ui';
+			color: white;
+			transition: 0.2s ease-in;
+		}
+
+		body {
+			background: linear-gradient(#e66465, #9198e5);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.homeform {
+			width: 55vw;
+			border: 2px solid black;
+			border-radius: 30px;
+		}
+
+		.homeform .title {
+			text-transform: uppercase;
+			text-align: center;
+			background-color: #e66465;
+			border-radius: 30px 30px 0 0;
+			padding: 3rem 2rem;
+			border-bottom: 2px solid black;
+		}
+
+		.homeform .inputbox {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			padding-top: 1rem;
+		}
+
+		.homeform .inputbox div {
+			margin-right: 20%;
+			margin-bottom: 1rem;
+		}
+
+		.homeform .inputbox .inputs {
+			width: 300px;
+			padding: 0.5rem 1rem;
+			font-size: 22px;
+			font-weight: bolder;
+			background: none;
+			border: none;
+			outline: none;
+			border-bottom: 1px solid gray;
+		}
+
+		.homeform .inputbox .inputs:hover {
+			border-bottom: 1px solid #9198e5;
+		}
+
+		.homeform .inputbox .inputs:hover::placeholder {
+			color: #9198e5;
+		}
+
+		.homeform .inputbox .inputs:focus {
+			background: none;
+		}
+
+		.homeform .inputbox label {
+			font-size: 22px;
+			font-weight: bolder;
+			text-transform: capitalize;
+		}
+
+		.homeform .btnholder {
+			display: grid;
+			place-items: center;
+			padding: 1rem 0;
+		}
+
+		.homeform .btnholder .btn {
+			width: 50%;
+			padding: 1rem 0;
+			color: black;
+			font-size: 22px;
+			font-weight: bolder;
+			text-transform: uppercase;
+			border: 1px solid transparent;
+			border-radius: 30px;
+		}
+
+		.homeform .btnholder .btn:hover {
+			transform: scale(1.01, 1.01);
+			color: white;
+			background-color: #e664648f;
+			border: 1px solid black;
+		}
+	</style>
+	<body>
+		<form action="/intro/" class="homeform" method="post">
+			{% csrf_token %}
+			<h1 class="title">
+				college recommendation system base on user knowledge using multivariate
+				regression
+			</h1>
+			<div class="inputbox">
+				<div>
+					<label for="nickname">nickname :</label>
+					<input
+						type="text"
+						name="nickname"
+						id="nickname"
+						class="inputs"
+						placeholder="Juan Dela Crus"
+						autocomplete="off"
+						required />
+				</div>
+				<div>
+					<label for="gwa">gwa :</label>
+					<input
+						type="number"
+						name="gwa"
+						step="any"
+						id="gwa"
+						class="inputs"
+						placeholder="75 - 100"
+						min="75"
+						max="100"
+						required />
+				</div>
+			</div>
+			<div class="btnholder">
+				<input type="submit" value="submit" class="btn" />
+			</div>
+		</form>
+	</body>
+</html>
