@@ -139,11 +139,11 @@ class MyViews:
             }
 
 
-            if len(self.results[0])>0:
-                nickname = request.POST['submits']
-                while (nickname!=self.nickname):
-                    pass
-                return render(request, 'programs/editedresult.html' , dict2)
+            #if len(self.results[0])>0:
+            nickname = request.POST['submits']
+            while (nickname!=self.nickname):
+                pass
+            return render(request, 'programs/editedresult.html' , dict2)
 
         return render(request, 'programs/redirecting.html')
 
