@@ -1,0 +1,592 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		{% comment %} Question 31 {% endcomment %}
+		<li>
+			<div class="distribute">
+				<p class="question">{{ gen_info_question_31 }}</p>
+				<div class="choices">
+					<div class="grid1">
+						<div class="ansA">
+							<label for="Q31A">{{ gen_info_choices_31a }}</label>
+							<input
+								type="radio"
+								name="Q31"
+								id="Q31A"
+								value="{{ gen_info_choices_31a }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansB">
+							<label for="Q31B">{{ gen_info_choices_31b }}</label>
+							<input
+								type="radio"
+								name="Q31"
+								id="Q31B"
+								value="{{ gen_info_choices_31b }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+					<div class="grid2">
+						<div class="ansC">
+							<label for="Q31C">{{ gen_info_choices_31c }}</label>
+							<input
+								type="radio"
+								name="Q31"
+								id="Q31C"
+								value="{{ gen_info_choices_31c }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansD">
+							<label for="Q31D">{{ gen_info_choices_31d }}</label>
+							<input
+								type="radio"
+								name="Q31"
+								id="Q31D"
+								value="{{ gen_info_choices_31d }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="images">
+				<img src="/static/media/{{ gen_info_pic_21 }}" alt="" class="qimg" />
+			</div>
+		</li>
+
+		{% comment %} Question 32 {% endcomment %}
+		<li>
+			<div class="distribute">
+				<p class="question">{{ gen_info_question_32 }}</p>
+				<div class="choices">
+					<div class="grid1">
+						<div class="ansA">
+							<label for="Q32A">{{ gen_info_choices_32a }}</label>
+							<input
+								type="radio"
+								name="Q32"
+								id="Q32A"
+								value="{{ gen_info_choices_32a }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansB">
+							<label for="Q32B">{{ gen_info_choices_32b }}</label>
+							<input
+								type="radio"
+								name="Q32"
+								id="Q32B"
+								value="{{ gen_info_choices_32b }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+					<div class="grid2">
+						<div class="ansC">
+							<label for="Q32C">{{ gen_info_choices_32c }}</label>
+							<input
+								type="radio"
+								name="Q32"
+								id="Q32C"
+								value="{{ gen_info_choices_32c }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansD">
+							<label for="Q32D">{{ gen_info_choices_32d }}</label>
+							<input
+								type="radio"
+								name="Q32"
+								id="Q32D"
+								value="{{ gen_info_choices_32d }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="images">
+				<img src="/static/media/{{ gen_info_pic_22 }}" alt="" class="qimg" />
+			</div>
+		</li>
+
+		{% comment %} Question 33 {% endcomment %}
+		<li>
+			<div class="distribute">
+				<p class="question">{{ gen_info_question_33 }}</p>
+				<div class="choices">
+					<div class="grid1">
+						<div class="ansA">
+							<label for="Q33A">{{ gen_info_choices_33a }}</label>
+							<input
+								type="radio"
+								name="Q33"
+								id="Q33A"
+								value="{{ gen_info_choices_33a }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansB">
+							<label for="Q33B">{{ gen_info_choices_33b }}</label>
+							<input
+								type="radio"
+								name="Q33"
+								id="Q33B"
+								value="{{ gen_info_choices_33b }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+					<div class="grid2">
+						<div class="ansC">
+							<label for="Q33C">{{ gen_info_choices_33c }}</label>
+							<input
+								type="radio"
+								name="Q33"
+								id="Q33C"
+								value="{{ gen_info_choices_33c }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansD">
+							<label for="Q33D">{{ gen_info_choices_33d }}</label>
+							<input
+								type="radio"
+								name="Q33"
+								id="Q33D"
+								value="{{ gen_info_choices_33d }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="images">
+				<img src="/static/media/{{ gen_info_pic_23 }}" alt="" class="qimg" />
+			</div>
+		</li>
+
+		{% comment %} Question 34 {% endcomment %}
+		<li>
+			<div class="distribute">
+				<p class="question">{{ gen_info_question_34 }}</p>
+				<div class="choices">
+					<div class="grid1">
+						<div class="ansA">
+							<label for="Q34A">{{ gen_info_choices_34a }}</label>
+							<input
+								type="radio"
+								name="Q34"
+								id="Q34A"
+								value="{{ gen_info_choices_34a }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansB">
+							<label for="Q34B">{{ gen_info_choices_34b }}</label>
+							<input
+								type="radio"
+								name="Q34"
+								id="Q34B"
+								value="{{ gen_info_choices_34b }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+					<div class="grid2">
+						<div class="ansC">
+							<label for="Q34C">{{ gen_info_choices_34c }}</label>
+							<input
+								type="radio"
+								name="Q34"
+								id="Q34C"
+								value="{{ gen_info_choices_34c }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansD">
+							<label for="Q34D">{{ gen_info_choices_34d }}</label>
+							<input
+								type="radio"
+								name="Q34"
+								id="Q34D"
+								value="{{ gen_info_choices_34d }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="images">
+				<img src="/static/media/{{ gen_info_pic_24 }}" alt="" class="qimg" />
+			</div>
+		</li>
+
+		{% comment %} Question 35 {% endcomment %}
+		<li>
+			<div class="distribute">
+				<p class="question">{{ gen_info_question_35 }}</p>
+				<div class="choices">
+					<div class="grid1">
+						<div class="ansA">
+							<label for="Q35A">{{ gen_info_choices_35a }}</label>
+							<input
+								type="radio"
+								name="Q35"
+								id="Q35A"
+								value="{{ gen_info_choices_35a }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansB">
+							<label for="Q35B">{{ gen_info_choices_35b }}</label>
+							<input
+								type="radio"
+								name="Q35"
+								id="Q35B"
+								value="{{ gen_info_choices_35b }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+					<div class="grid2">
+						<div class="ansC">
+							<label for="Q35C">{{ gen_info_choices_35c }}</label>
+							<input
+								type="radio"
+								name="Q35"
+								id="Q35C"
+								value="{{ gen_info_choices_35c }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansD">
+							<label for="Q35D">{{ gen_info_choices_35d }}</label>
+							<input
+								type="radio"
+								name="Q35"
+								id="Q35D"
+								value="{{ gen_info_choices_35d }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="images">
+				<img src="/static/media/{{ gen_info_pic_25 }}" alt="" class="qimg" />
+			</div>
+		</li>
+
+		{% comment %} Question 36 {% endcomment %}
+		<li>
+			<div class="distribute">
+				<p class="question">{{ gen_info_question_36 }}</p>
+				<div class="choices">
+					<div class="grid1">
+						<div class="ansA">
+							<label for="Q36A">{{ gen_info_choices_36a }}</label>
+							<input
+								type="radio"
+								name="Q36"
+								id="Q36A"
+								value="{{ gen_info_choices_36a }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansB">
+							<label for="Q36B">{{ gen_info_choices_36b }}</label>
+							<input
+								type="radio"
+								name="Q36"
+								id="Q36B"
+								value="{{ gen_info_choices_36b }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+					<div class="grid2">
+						<div class="ansC">
+							<label for="Q36C">{{ gen_info_choices_36c }}</label>
+							<input
+								type="radio"
+								name="Q36"
+								id="Q36C"
+								value="{{ gen_info_choices_36c }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansD">
+							<label for="Q36D">{{ gen_info_choices_36d }}</label>
+							<input
+								type="radio"
+								name="Q36"
+								id="Q36D"
+								value="{{ gen_info_choices_36d }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="images">
+				<img src="/static/media/{{ gen_info_pic_26 }}" alt="" class="qimg" />
+			</div>
+		</li>
+
+		{% comment %} Question 37 {% endcomment %}
+		<li>
+			<div class="distribute">
+				<p class="question">{{ gen_info_question_37 }}</p>
+				<div class="choices">
+					<div class="grid1">
+						<div class="ansA">
+							<label for="Q37A">{{ gen_info_choices_37a }}</label>
+							<input
+								type="radio"
+								name="Q37"
+								id="Q37A"
+								value="{{ gen_info_choices_37a }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansB">
+							<label for="Q37B">{{ gen_info_choices_37b }}</label>
+							<input
+								type="radio"
+								name="Q37"
+								id="Q37B"
+								value="{{ gen_info_choices_37b }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+					<div class="grid2">
+						<div class="ansC">
+							<label for="Q37C">{{ gen_info_choices_37c }}</label>
+							<input
+								type="radio"
+								name="Q37"
+								id="Q37C"
+								value="{{ gen_info_choices_37c }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansD">
+							<label for="Q37D">{{ gen_info_choices_37d }}</label>
+							<input
+								type="radio"
+								name="Q37"
+								id="Q37D"
+								value="{{ gen_info_choices_37d }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="images">
+				<img src="/static/media/{{ gen_info_pic_27 }}" alt="" class="qimg" />
+			</div>
+		</li>
+
+		{% comment %} Question 38 {% endcomment %}
+		<li>
+			<div class="distribute">
+				<p class="question">{{ gen_info_question_38 }}</p>
+				<div class="choices">
+					<div class="grid1">
+						<div class="ansA">
+							<label for="Q38A">{{ gen_info_choices_38a }}</label>
+							<input
+								type="radio"
+								name="Q38"
+								id="Q38A"
+								value="{{ gen_info_choices_38a }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansB">
+							<label for="Q38B">{{ gen_info_choices_38b }}</label>
+							<input
+								type="radio"
+								name="Q38"
+								id="Q38B"
+								value="{{ gen_info_choices_38b }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+					<div class="grid2">
+						<div class="ansC">
+							<label for="Q38C">{{ gen_info_choices_38c }}</label>
+							<input
+								type="radio"
+								name="Q38"
+								id="Q38C"
+								value="{{ gen_info_choices_38c }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansD">
+							<label for="Q38D">{{ gen_info_choices_38d }}</label>
+							<input
+								type="radio"
+								name="Q38"
+								id="Q38D"
+								value="{{ gen_info_choices_38d }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="images">
+				<img src="/static/media/{{ gen_info_pic_28 }}" alt="" class="qimg" />
+			</div>
+		</li>
+
+		{% comment %} Question 39 {% endcomment %}
+		<li>
+			<div class="distribute">
+				<p class="question">{{ gen_info_question_39 }}</p>
+				<div class="choices">
+					<div class="grid1">
+						<div class="ansA">
+							<label for="Q39A">{{ gen_info_choices_39a }}</label>
+							<input
+								type="radio"
+								name="Q39"
+								id="Q39A"
+								value="{{ gen_info_choices_39a }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansB">
+							<label for="Q39B">{{ gen_info_choices_39b }}</label>
+							<input
+								type="radio"
+								name="Q39"
+								id="Q39B"
+								value="{{ gen_info_choices_39b }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+					<div class="grid2">
+						<div class="ansC">
+							<label for="Q39C">{{ gen_info_choices_39c }}</label>
+							<input
+								type="radio"
+								name="Q39"
+								id="Q39C"
+								value="{{ gen_info_choices_39c }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansD">
+							<label for="Q39D">{{ gen_info_choices_39d }}</label>
+							<input
+								type="radio"
+								name="Q39"
+								id="Q39D"
+								value="{{ gen_info_choices_39d }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="images">
+				<img src="/static/media/{{ gen_info_pic_29 }}" alt="" class="qimg" />
+			</div>
+		</li>
+
+		{% comment %} Question 40 {% endcomment %}
+		<li>
+			<div class="distribute">
+				<p class="question">{{ gen_info_question_40 }}</p>
+				<div class="choices">
+					<div class="grid1">
+						<div class="ansA">
+							<label for="Q40A">{{ gen_info_choices_40a }}</label>
+							<input
+								type="radio"
+								name="Q40"
+								id="Q40A"
+								value="{{ gen_info_choices_40a }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansB">
+							<label for="Q40B">{{ gen_info_choices_40b }}</label>
+							<input
+								type="radio"
+								name="Q40"
+								id="Q40B"
+								value="{{ gen_info_choices_40b }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+					<div class="grid2">
+						<div class="ansC">
+							<label for="Q40C">{{ gen_info_choices_40c }}</label>
+							<input
+								type="radio"
+								name="Q40"
+								id="Q40C"
+								value="{{ gen_info_choices_40c }}"
+								class="cRadios"
+								required />
+						</div>
+
+						<div class="ansD">
+							<label for="Q40D">{{ gen_info_choices_40d }}</label>
+							<input
+								type="radio"
+								name="Q40"
+								id="Q40D"
+								value="{{ gen_info_choices_40d }}"
+								class="cRadios"
+								required />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="images">
+				<img src="/static/media/{{ gen_info_pic_30 }}" alt="" class="qimg" />
+			</div>
+		</li>
+	</body>
+</html>

@@ -1,144 +1,62 @@
 <!-- @format -->
 
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="UTF-8" />
 		<meta name="app-name" content="website_viewer" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="{% static 'style/webstyle.css' %}" />
 		<title>Intro | College Recommendation System</title>
 	</head>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-			text-decoration: none;
-			font-family: 'Segoe Ui';
-			transition: 0.2s ease-in;
-		}
-
-		body {
-			background: linear-gradient(#e66465, #9198e5);
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			width: 100vw;
-			height: 100vh;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-
-		.introform {
-			border: 1px solid black;
-			width: 75vw;
-			border-radius: 30px;
-			background-color: rgba(255, 255, 255, 0.5);
-		}
-
-		.introform .welcome {
-			text-transform: capitalize;
-			background-color: #e66465;
-			font-weight: bold;
-			padding: 1rem 3rem;
-			border-radius: 30px 30px 0 0;
-			border-bottom: 1px solid black;
-		}
-
-		.introform .introtext {
-			padding: 1rem 3rem;
-		}
-
-		.introform .introtext p {
-			font-size: 22px;
-			text-align: justify;
-		}
-
-		.introform .introtext .warning {
-			color: red;
-			font-size: 20px;
-			font-weight: bold;
-		}
-
-		.introform .introtext .warning .undelined {
-			color: red;
-			text-decoration: underline;
-			font-weight: normal;
-		}
-
-		.introform .introtext ul {
-			padding: 0.5rem 2rem;
-		}
-
-		.introform .introtext ul li {
-			font-size: 18px;
-			font-weight: bold;
-		}
-
-		.introform .btnbox {
-			display: grid;
-			place-items: center;
-			padding-bottom: 1rem;
-		}
-
-		.introform .btnbox .btn {
-			color: black;
-			font-size: 26px;
-			font-weight: bold;
-			padding: 0.5rem 6rem;
-			border: 2px solid transparent;
-			border-radius: 30px;
-		}
-
-		.introform .btnbox .btn:hover {
-			transform: scale(1.01, 1.01);
-			color: white;
-			border: 2px solid black;
-			background-color: #e66464;
-		}
-	</style>
 	<body>
-		<form action="/geninfo/" method="post" class="introform">
-			{% csrf_token %}
-			<h1 class="welcome">welcome, {{ nickname }}</h1>
-			<div class="introtext">
-				<p>
-					This
-					<b>
-						College Recommendation System Based on User Knowledge using
-						Multivariate Regression
-					</b>
-					will assist you in determining which college programs best match your
-					skills and abilities. You will take an aptitude test with these
-					subject areas:
-				</p>
-				<ul>
-					<li>General Information</li>
-					<li>Science</li>
-					<li>Numerical Reasoning</li>
-					<li>Verbal Reasoning</li>
-					<li>Abstract Reasoning</li>
-				</ul>
-				<p>
-					You must complete the test within <b>12 minutes</b>, allotted time for
-					each subject area. All unfinished items will be considered wrong.
-					Press the <b>Start Button</b> below to begin.
-				</p>
-				<br />
-				<p class="warning">
-					Notice:
-					<u class="undelined"
-						>Mistakingly clicked the text on answer can automatically choosed
-						the first answer, our system still not in good shape please review
-						your answers to avoid wrong inputs.</u
-					>
-				</p>
-				<br />
-				<h2>God bless with your exam.</h2>
-			</div>
-			<div class="btnbox">
-				<input type="submit" value="START" class="btn" />
-			</div>
-		</form>
+		<div class="start">
+			<form action="/geninfo/" method="post" class="introform">
+				{% csrf_token %}
+				<h1 class="welcome">welcome, {{ nickname }}</h1>
+				<div class="introtext">
+					<p>
+						This
+						<b id="strong">
+							College Recommendation System Based on User Knowledge using
+							Multivariate Regression
+						</b>
+						will assist you in determining which college programs best match
+						your skills and abilities by undergoing a similar approach of
+						entrace exam. You will take an aptitude test with these subject
+						areas:
+					</p>
+					<ul>
+						<li>General Information</li>
+						<li>Science</li>
+						<li>Numerical Reasoning</li>
+						<li>Verbal Reasoning</li>
+						<li>Abstract Reasoning</li>
+					</ul>
+					<p>
+						You must complete the test within <b id="strong">12 MINUTE'S</b>,
+						allotted time for each subject area. All unfinished items will be
+						considered wrong and/or the system will considered the whole subject
+						as failed. Press the <b>Start Button</b> below to begin.
+					</p>
+					<br />
+					<p class="warning">
+						Notice:
+						<u class="undelined"
+							>Pleast take this seriously like a real entrance exam to make sure
+							the effectiveness of recommendation and also review your answer
+							before you submit.</u
+						>
+					</p>
+					<br />
+					<h3>God bless with your exam.</h3>
+				</div>
+				<div class="btnbox">
+					<input type="submit" value="START" class="btn" />
+				</div>
+			</form>
+		</div>
 	</body>
 </html>

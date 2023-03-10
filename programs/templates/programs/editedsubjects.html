@@ -1,6 +1,7 @@
 <!-- @format -->
 
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -8,162 +9,9 @@
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="{% static 'style/webstyle.css' %}">
 		<title>Verbal Reasoning | College Recommendation System</title>
 	</head>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-			text-decoration: none;
-			font-family: 'Segoe Ui';
-			color: black;
-			transition: 0.2s ease-in;
-			user-select: none;
-			-webkit-user-select: none;
-			 -moz-user-select: none;
-			 -ms-user-select: none;
-			 user-select: none;
-		}
-
-		body {
-			background: linear-gradient(#e66465, #9198e5);
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			width: 100vw;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 0.5rem;
-			padding: 0 4rem;
-		}
-
-		.timer {
-			width: 100vw;
-			height: 8vh;
-			background-color: black;
-			color: white;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-size: 22px;
-			font-weight: bold;
-			position: sticky;
-			top: 0;
-			left: 0;
-		}
-
-		#timer {
-			color: white;
-		}
-
-		.title {
-			background-image: url('/static/media/subTextLogo.png');
-			background-size: 100% 100%;
-			border: 2px solid black;
-			width: 100%;
-			height: 150px;
-			color: black;
-			font-size: 56px;
-			font-weight: bolder;
-			padding: 2rem 4rem;
-			border-radius: 10px;
-		}
-
-		.questions {
-			width: 100%;
-			background-color: white;
-			border: 2px solid black;
-			border-radius: 10px;
-			padding: 0.5rem 1rem;
-		}
-
-		.questions .choices {
-			padding: 0 2rem;
-			display: flex;
-			justify-content: space-between;
-		}
-
-		.questions .choices .textquestion {
-			width: 100%;
-		}
-
-		.questions .choices .textquestion .mainquestion {
-			font-size: 22px;
-			font-weight: bold;
-		}
-
-		.questions .choices .textquestion .textanswers {
-			display: flex;
-			padding: 0.5rem;
-			gap: 1rem;
-		}
-
-		.questions .choices .textquestion .textanswers .radios {
-			width: 25px;
-			height: 25px;
-		}
-
-		.questions .choices .textquestion .textanswers .answertext {
-			font-size: 16px;
-			font-weight: bold;
-		}
-
-		.questions .images .qimg {
-			width: 250px;
-			height: 250px;
-			outline: none;
-			border: none;
-		}
-
-		.questions .images img[alt]:after {
-			display: none;
-		}
-
-		.questions .buttonbox {
-			position: relative;
-			width: 250px;
-			height: 60px;
-			margin: 0 0 2rem 3rem;
-			border-radius: 10px;
-		}
-
-		.questions .buttonbox .submits {
-			position: relative;
-			font-size: 22px;
-			font-weight: bold;
-			border-radius: 10px;
-			border: none;
-			color: transparent;
-			background: none;
-			outline: none;
-			width: 100%;
-			height: 100%;
-			z-index: 10;
-			cursor: pointer;
-		}
-
-		.questions .buttonbox .btnbg {
-			position: absolute;
-			font-size: 22px;
-			font-weight: bold;
-			text-align: center;
-			width: 100%;
-			height: 100%;
-			padding: 0.5rem 0;
-			text-transform: uppercase;
-			border-radius: 10px;
-			border: 2px solid transparent;
-			background: #e664649c;
-			z-index: 1;
-		}
-
-		.questions .buttonbox:hover > .btnbg {
-			color: white;
-			background-color: #e66465;
-			border: 2px solid black;
-		}
-	</style>
 	<body onmousedown="return false" onselect="return false">
 		<div class="timer">TIME LEFT:&nbsp;<span id="timer">00:00</span></div>
 		<div class="title">Verbal Reasoning</div>

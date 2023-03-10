@@ -1,9 +1,13 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
   <head>
     <meta http-equiv="refresh" content="7; url='/home'" />
+		<link rel="stylesheet" href="{% static 'style/webstyle.css' %}" />
+    <title>You failed the test.</title>
   </head>
   <body>
+    
     <p>Please follow <a href="/home">this link</a>.</p>
   </body>
 </html>
