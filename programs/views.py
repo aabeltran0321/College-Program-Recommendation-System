@@ -7,7 +7,7 @@ import json
 from django.contrib import messages
 from django.core.files.storage import FileSystemStorage
 
-# Create your views here.
+# Image finder/loader from "programs/static/media" and saving it for fast loading
 def handle_uploaded_file(f,filename):
     
     with open('./programs/static/media/' + filename, 'wb+') as destination:
@@ -15,6 +15,7 @@ def handle_uploaded_file(f,filename):
             destination.write(chunk)
 
 class MyViews:
+    # Initializing all variable needed for later use of the system.
     def __init__(self) -> None:
         self.nickname = ""
         self.gwa = 0.0
@@ -44,8 +45,10 @@ class MyViews:
             "numerical_reasoning": 0.0,
         }
 
+        # Loading the courses
         self.dept_course =pd.read_csv('./programs/Department_Courses.tsv', sep='\t')
 
+        # Loading the Actual trained model and mapping the ordered label for corresponding value.
         self.model = joblib.load("./programs/regression.pkl")
         f = open("./programs/labelmap.json")
         self.labelmap = json.load(f)
@@ -54,6 +57,8 @@ class MyViews:
         self. nickname = ""
         self.GWA = 0.0
 
+
+    # Block of code where the prediction occured
     def predict_courses(self,GWA,GI,SCI,NR,VR,AR):
         if GWA>0 and GI>0 and SCI>0 and NR>0 and AR>0:
             Y_pred_rf_proba = list(self.model.predict_proba([[GWA,GI,SCI,NR,VR,AR]])[0])
@@ -108,6 +113,7 @@ class MyViews:
             return render(request, 'programs/admin_home.html')
         return render(request, 'programs/admin.html')
 
+    # The actual block of code that calculate and request the prediction courses.
     def results(self,request):
         if request.method == "POST":
             self.check_answer_sheet(request,self.answer_keys["abstract_reasoning"],"abstract_reasoning")
@@ -130,17 +136,18 @@ class MyViews:
             "score_3": NR,
             "score_4": VR,
             "score_5": AR,
-
             }
-            
-            #if len(self.results[0])>0:
-            nickname = request.POST['submits']
-            while (nickname!=self.nickname):
-                pass
-            return render(request, 'programs/editedresult.html' , dict2)
+
+
+            if len(self.results[0])>0:
+                nickname = request.POST['submits']
+                while (nickname!=self.nickname):
+                    pass
+                return render(request, 'programs/editedresult.html' , dict2)
 
         return render(request, 'programs/redirecting.html')
 
+    # Homepage Rendering Request
     def intro(self,request):
         if request.method == "POST":
             self. nickname = request.POST['nickname']
@@ -152,14 +159,17 @@ class MyViews:
                 }
             return render(request, 'programs/editedintro.html', dict1)
         return render(request, 'programs/redirecting.html')
-    
+
+
+    # General Information Page
     def gen_info(self,request):
         if request.method == "POST":
             return render(request, 'programs/editedgeninfo.html', self.load_questionnaire("gen_info")) 
         return render(request, 'programs/redirecting.html')
 
+
+    # Science Page
     def science(self,request):
-        
         if request.method == "POST":
             self.check_answer_sheet(request,self.answer_keys["gen_info"],"gen_info")
             
@@ -167,6 +177,7 @@ class MyViews:
         return render(request, 'programs/redirecting.html')
 
 
+    # Numerical Reasoning Page
     def numerical_reasoning(self,request):
         
         if request.method == "POST":
@@ -175,6 +186,8 @@ class MyViews:
             return render(request, 'programs/editednumerical.html' , self.load_questionnaire("numerical_reasoning"))
         return render(request, 'programs/redirecting.html')
 
+
+    # Verbal Reasoning Page
     def verbal_reasoning(self,request):
         
         if request.method == "POST":
@@ -182,6 +195,9 @@ class MyViews:
             
             return render(request, 'programs/editedverbal.html' , self.load_questionnaire("verbal_reasoning"))
         return render(request, 'programs/redirecting.html')
+
+
+    # Abstract Reasoning Page
     def abstract_reasoning(self,request):
         
         if request.method == "POST":
@@ -190,10 +206,12 @@ class MyViews:
             return render(request, 'programs/editedabstract.html' , self.load_questionnaire("abstract_reasoning"))
         return render(request, 'programs/redirecting.html')
 
+
+    # Autoload Questionnaire
     def load_questionnaire(self,subject=""):
 
+        # Initializing the subjects questions
         data = list(self.db1.getQuestionsByCat(self.dictConv[subject]))
-        #print(isinstance(data,list))
         if not("abstract" in subject):
             random.shuffle(data)
         dict1 = {
@@ -202,14 +220,12 @@ class MyViews:
             subject+"_choices_1b" : "NO Choice B",
             subject+"_choices_1c" : "NO Choice C",
             subject+"_choices_1d" : "NO Choice D",
-        
         }
 
         dict2 = {}
-
+        # Only first 40 questionnaire
         for i in range(40):
             try:
-                
                 choices = list(data[i][2:6])
                 if not("abstract" in subject):
                     random.shuffle(choices)
@@ -239,17 +255,17 @@ class MyViews:
 
         dict2["nickname_1"] = self.nickname
         return dict2
+
+
+    # Check answer sheet function
     def check_answer_sheet(self,request,answersheet,subject):
-
-        
-
         lst = []
         #print(request.POST)
         for a in range(40):
             try:
-                
                 lst.append(answersheet[a]==request.POST[subject+'_choices_'+str(a+1)])
-                #print(subject+'_choices_'+str(a+1))
+                # print(subject+'_choices_'+str(a+1))
+                print(lst)
             except:
                 lst.append(False)
         if not("abstract" in subject):
