@@ -1,0 +1,772 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Segoe Ui';
+  color: var(--black-color);
+  transition: 0.2s ease-in;
+}
+
+:root {
+  --main-color: #242582;
+  --shadow-color: #99738E;
+  --question-bg: #5AB9EA;
+  --white-color: #FFFFFF;
+  --black-color: #000000;
+  background-color: var(--shadow-color);
+}
+
+.start {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeform {
+  width: 60%;
+  background-color: var(--white-color);
+  border: 2px solid var(--black-color);
+  border-radius: 22px;
+}
+
+.homeform .hometitle {
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--question-bg);
+  border-radius: 20px 20px 0 0;
+  padding: 2rem 1rem;
+  border-bottom: 2px solid black;
+  color: var(--black-color);
+}
+
+.homeform .inputbox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 1rem;
+}
+
+.homeform .inputbox div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.homeform .inputbox .inputs {
+  width: 300px;
+  padding: 0.5rem 1rem;
+  font-size: 22px;
+  font-weight: bolder;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  color: var(--black-color);
+}
+
+.homeform .inputbox .inputs:hover {
+  border-bottom: 1px solid #9198e5;
+}
+
+.homeform .inputbox .inputs:hover::placeholder {
+  color: #9198e5;
+}
+
+.homeform .inputbox .inputs:focus {
+  background: none;
+}
+
+.homeform .inputbox label {
+  font-size: 22px;
+  font-weight: bolder;
+  text-transform: capitalize;
+  color: var(--black-color);
+}
+
+.homeform .btnholder {
+  display: grid;
+  place-items: center;
+  padding: 1rem 0;
+}
+
+.homeform .btnholder .btn {
+  width: 50%;
+  padding: 1rem 0;
+  color: black;
+  font-size: 22px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border: 1px solid var(--shadow-color);
+  border-radius: 30px;
+}
+
+.homeform .btnholder .btn:hover {
+  transform: scale(1.01, 1.01);
+  background-color: #e664648f;
+  border: 1px solid black;
+}
+
+.introform {
+  border: 1px solid black;
+  width: 75%;
+  border-radius: 20px;
+  background-color: var(--white-color);
+}
+
+.introform .welcome {
+  text-transform: capitalize;
+  background-color: var(--main-color);
+  font-weight: bold;
+  padding: 1rem 3rem;
+  border-radius: 18px 18px 0 0;
+  border-bottom: 1px solid black;
+  color: var(--white-color);
+}
+
+.introform .introtext {
+  padding: 1rem 3rem;
+}
+
+.introform .introtext p {
+  font-size: 18px;
+  text-align: justify;
+  color: var(--black-color);
+}
+
+.introform .introtext .warning {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.introform .introtext .warning .undelined {
+  color: red;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+.introform .introtext ul {
+  padding: 0.5rem 2rem;
+}
+
+.introform .introtext ul li {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.introform .btnbox {
+  display: grid;
+  place-items: center;
+  padding-bottom: 1rem;
+}
+
+.introform .btnbox .btn {
+  color: black;
+  font-size: 26px;
+  font-weight: bold;
+  padding: 0.5rem 6rem;
+  border: 2px solid var(--main-color);
+  border-radius: 30px;
+}
+
+.introform .btnbox .btn:hover {
+  transform: scale(1.01, 1.01);
+  color: white;
+  border: 2px solid black;
+  background-color: #e66464;
+}
+
+.timer {
+  width: 100vw;
+  height: 8vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  position: sticky;
+  outline: 2px solid var(--black-color);
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#timer {
+  color: white;
+}
+
+.enclose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  gap: .5rem;
+}
+
+.title {
+  background-image: url('/static/media/subTextLogo.png');
+  background-size: 100% 100%;
+  border: 2px solid black;
+  width: 100%;
+  height: 150px;
+  color: black;
+  font-size: 56px;
+  font-weight: bolder;
+  padding: 2rem 4rem;
+  border-radius: 10px;
+}
+
+.questions {
+  width: 100%;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+}
+
+.questions .choices {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.questions .choices .textquestion {
+  width: 100%;
+}
+
+.questions .choices .textquestion .mainquestion {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.questions .choices .textquestion .textanswers {
+  display: flex;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+.questions .choices .textquestion .textanswers .radios {
+  transform: scale(2, 2);
+}
+
+.questions .choices .textquestion .textanswers .answertext {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: none;
+  pointer-events: none;
+}
+
+.questions .images .qimg {
+  width: 250px;
+  height: 250px;
+  outline: none;
+  border: none;
+}
+
+.questions .images img[alt]:after {
+  display: none;
+}
+
+.questions .buttonbox {
+  position: relative;
+  width: 250px;
+  height: 60px;
+  margin: 0 0 2rem 3rem;
+  border-radius: 10px;
+}
+
+.questions .buttonbox .submits {
+  position: relative;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  color: transparent;
+  background: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.questions .buttonbox .btnbg {
+  position: absolute;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background: #e664649c;
+  z-index: 1;
+}
+
+.questions .buttonbox:hover>.btnbg {
+  color: white;
+  background-color: #e66465;
+  border: 2px solid black;
+}
+
+.enclose .questions .questionnaires .textquestion {
+  width: 100%;
+}
+
+.fenclose {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem 2rem;
+}
+
+.fenclose .resultform {
+  background-color: white;
+  border: 1px solid black;
+  width: 100%;
+  height: auto;
+}
+
+.fenclose .resultform .ftitle {
+  outline: 1px solid red;
+  text-align: center;
+  padding: 1rem 0;
+
+}
+
+.fenclose .resultform .resultbox {
+  outline: 1px solid green;
+  padding: 1rem 3rem;
+}
+
+.fenclose .resultform .resultbox .ptext {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.fenclose .resultform .resultbox .list {
+  padding: .5rem 2rem;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.fenclose .resultform .resultbox .list li {
+  list-style: none;
+}
+
+.fenclose .resultform .resultbox .list li::before {
+  content: "▶";
+  color: var(--shadow-color);
+  display: inline-block;
+  margin-right: 1ch;
+}
+
+.fenclose .resultform .fbtnbox {
+  display: grid;
+  place-items: center;
+  padding: 1rem 0;
+}
+
+.fenclose .resultform .fbtnbox .fbtn {
+  width: 50%;
+  padding: .75rem 0;
+  color: var(--main-color);
+  font-size: 22px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid var(--main-color);
+  border-radius: 30px;
+}
+
+.fenclose .resultform .fbtnbox .fbtn:hover {
+  transform: scale(1.01, 1.01);
+  background-color: #e664648f;
+  color: var(--black-color);
+  border: 1px solid black;
+}
+
+/* Responsiveness Section */
+
+@media screen and (max-width: 991px) {
+
+  .start {
+    padding: .5rem;
+  }
+
+  .homeform {
+    width: 100%;
+  }
+
+  .introform {
+    width: 100%;
+  }
+
+  .introform .introtext p {
+    font-size: 16px;
+  }
+
+  .introform .introtext ul li {
+    font-size: 14px;
+  }
+
+  .introform .introtext .warning {
+    font-size: 16px;
+  }
+
+  .introform .btnbox .btn {
+    font-size: 18px;
+  }
+
+  .enclose .title {
+    padding: 0;
+    display: grid;
+    place-items: center;
+  }
+
+  .enclose .questions .questionnaires .cimg {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .homeform .hometitle {
+    font-size: 28px;
+  }
+
+  .homeform .inputbox {
+    padding-top: .5rem;
+    align-items: flex-start;
+  }
+
+  .homeform .inputbox div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 .5rem;
+  }
+
+  .homeform .inputbox .inputs {
+    width: 100%;
+  }
+
+  .introform .welcome {
+    font-size: 20px;
+  }
+
+  .introform .introtext p {
+    font-size: 14px;
+  }
+
+  .introform .introtext ul li {
+    font-size: 12px;
+  }
+
+  .introform .introtext .warning {
+    font-size: 14px;
+  }
+
+  .introform .introtext h3 {
+    font-size: 16px;
+  }
+
+  .enclose .title {
+    font-size: 46px;
+  }
+
+  .enclose .questions .choices {
+    padding: .5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .enclose .title {
+    font-size: 38px;
+  }
+
+  .enclose .questions .choices {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .enclose .questions .choices .images {
+    display: flex;
+    justify-content: center;
+  }
+
+  .fenclose .resultform .ftitle {
+    font-size: 18px;
+    padding: 1rem 2rem;
+  }
+
+  .fenclose .resultform .resultbox h2 {
+    font-size: 22px;
+  }
+
+  .fenclose .resultform .resultbox .ptext {
+    font-size: 18px;
+  }
+
+  .fenclose .resultform .resultbox ul li {
+    font-size: 16px;
+  }
+
+  .fenclose .resultform .fbtnbox {
+    padding: 0;
+    padding-bottom: 1rem;
+  }
+
+  .fenclose .resultform .fbtnbox .fbtn {
+    font-size: 18px;
+    padding: .5rem 0;
+  }
+
+}
+
+@media screen and (max-width: 502px) {
+
+  .homeform .hometitle {
+    font-size: 24px;
+  }
+
+  .introform .welcome {
+    font-size: 18px;
+  }
+
+  .introform .introtext p {
+    font-size: 12px;
+  }
+
+  .introform .introtext ul li {
+    font-size: 10px;
+  }
+
+  .introform .introtext .warning {
+    font-size: 12px;
+  }
+
+  .introform .introtext h3 {
+    font-size: 14px;
+  }
+
+  .introform .btnbox .btn {
+    font-size: 14px;
+  }
+
+  .enclose .title {
+    padding: 0;
+    font-size: 38px;
+    display: grid;
+    place-items: center;
+    height: 80px;
+  }
+
+  .enclose .questions .choices .textquestion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .enclose .questions .choices .textquestion .mainquestion {
+    font-size: 18px;
+  }
+
+  .enclose .questions .choices .textquestion .textanswers {
+    padding: 0 1.5rem;
+  }
+
+  .enclose .questions .choices {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .enclose .questions .choices .images {
+    display: grid;
+    place-items: center;
+  }
+
+  .enclose .questions .buttonbox {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin: 0;
+  }
+
+  .enclose .questions .questionnaires .abstractchoices {
+    width: 100%;
+    display: flex;
+  }
+
+  .enclose .questions .questionnaires .abstractchoices .ansimg {
+    width: 60%;
+  }
+
+  .fenclose .resultform .resultbox h2 {
+    font-size: 18px;
+  }
+
+  .fenclose .resultform .resultbox .ptext {
+    font-size: 16px;
+  }
+
+  .fenclose .resultform .resultbox ul li {
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+
+  .homeform .hometitle {
+    font-size: 22px;
+  }
+
+  .introform .introtext {
+    padding: .5rem .75rem;
+  }
+
+  .enclose .questions .choices .textquestion .textanswers {
+    padding: 0 .25rem;
+  }
+
+  .enclose .title {
+    font-size: 28px;
+  }
+
+  .fenclose .resultform .ftitle {
+    padding: .25rem;
+  }
+
+  .fenclose .resultform .resultbox {
+    padding: .5rem 1rem;
+  }
+
+}
+
+@media screen and (max-width: 380px) {
+
+  .fenclose .resultform .resultbox .list {
+    padding: 0 .5rem;
+  }
+
+  .fenclose .resultform .resultbox .list li {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 341px) {
+
+  .homeform .hometitle {
+    font-size: 21px;
+  }
+
+  .introform .btnbox .btn {
+    padding: .25rem 3rem;
+  }
+
+  .enclose .title {
+    font-size: 22px;
+  }
+
+  .fenclose {
+    display: flex;
+    justify-content: center;
+    padding: 0 .5rem;
+  }
+
+  .fenclose .resultform .resultbox .list {
+    padding: 0;
+  }
+
+  .fenclose .resultform .resultbox .list li::before {
+    margin-right: .5ch;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+
+  .timer {
+    min-width: 280px;
+  }
+
+  .homeform .hometitle {
+    font-size: 20px;
+  }
+
+  .enclose {
+    padding: .25rem;
+  }
+
+  .enclose .questions {
+    min-width: 272px;
+  }
+
+  .enclose .title {
+    min-height: 80px;
+    min-width: 268px;
+    font-size: 20px;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .enclose .questions .choices {
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .enclose .questions .choices .textquestion .mainquestion {
+    font-size: 16px;
+  }
+
+  .enclose .questions .choices .textquestion .mainquestion .textanswers .answertext {
+    font-size: 14px;
+  }
+
+  .enclose .questions .images .qimg {
+    width: 100%;
+  }
+
+  .questions .buttonbox {
+    width: 100%;
+    margin: 0;
+  }
+
+  .enclose .questions .questionnaires .cimg {
+    min-width: 232px;
+  }
+
+  .fenclose .resultform .ftitle {
+    font-size: 16px;
+  }
+
+  .fenclose .resultform .resultbox h2 {
+    font-size: 16px;
+  }
+
+  .fenclose .resultform .resultbox .ptext {
+    font-size: 14px;
+  }
+
+  .fenclose .resultform .resultbox .list li {
+    font-size: 12px;
+  }
+
+}
+
+/*  onmousedown="return false" onselect="return false" */
