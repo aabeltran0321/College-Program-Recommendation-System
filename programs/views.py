@@ -81,6 +81,13 @@ class MyViews:
         return s
 
     def home(self,request):
+        self.answer_keys={
+            "gen_info": [],
+            "science": [],
+            "verbal_reasoning": [],
+            "abstract_reasoning": [],
+            "numerical_reasoning": [],
+        }
         return render(request, 'programs/edithome.html')
     def admin_login(self,request):
         return render(request, 'programs/admin.html')
