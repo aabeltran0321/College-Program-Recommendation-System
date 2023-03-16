@@ -261,6 +261,7 @@ class MyViews:
                 self.answer_keys[subject].append("")
 
         dict2["nickname_1"] = self.nickname
+        print(self.answer_keys[subject])
         return dict2
 
 
@@ -272,7 +273,7 @@ class MyViews:
             try:
                 lst.append(answersheet[a]==request.POST[subject+'_choices_'+str(a+1)])
                 # print(subject+'_choices_'+str(a+1))
-                print(lst)
+                #print(lst)
             except:
                 lst.append(False)
         if not("abstract" in subject):
